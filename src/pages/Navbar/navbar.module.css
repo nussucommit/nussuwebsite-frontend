@@ -1,0 +1,25 @@
+.nav {
+  display: grid;
+  grid-template-columns: 20vw 80vw;
+  align-items: center;
+  background-color: #f9f9f9;
+  box-shadow: 1px 2px 5px lightgray;
+}
+
+.image {
+  width: 10vw;
+  height: 7.5vh;
+  padding-left: 2.5vw;
+}
+
+.navbar {
+  font-family: "Lora";
+  font-style: normal;
+  height: 7.5vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1rem;
+  color: #3e3e3e;
+  padding-right: 10vw;
+}

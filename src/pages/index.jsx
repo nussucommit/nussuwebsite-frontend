@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { Routes as ROUTES } from "../constants/routes.ts";
+import { Routes as ROUTES } from "../constants/routes.js";
 
 import AboutUs from "./AboutUs/AboutUsPage";
 import Governance from "./AboutUs/Governance";
