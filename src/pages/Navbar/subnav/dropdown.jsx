@@ -5,7 +5,9 @@ const Dropdown = ({ submenus }) => {
     <div className={styles.dropdowncontent}>
       {submenus.map((submenu, index) => (
         <div key={index} className={styles.dropitems}>
-          <a href={submenu.path}>{submenu.title}</a>
+          <a className={styles.navitem} href={submenu.path}>
+            {submenu.title}
+          </a>
         </div>
       ))}
     </div>

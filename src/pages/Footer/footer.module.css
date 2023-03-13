@@ -21,8 +21,55 @@
   justify-content: space-between;
 }
 
-a {
+.section {
+  color: white !important;
   font-weight: 750;
+}
+
+.subsection {
+  color: white !important;
+}
+
+.aboutUs {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.joinUs {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.ourWork {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.events {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.freshmen {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.services {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
 }
 
 .links {
