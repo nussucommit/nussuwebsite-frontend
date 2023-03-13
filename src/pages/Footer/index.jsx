@@ -24,17 +24,29 @@ const Footer = () => {
           </a>
         </div>
         <div className={styles.joinUs}>
-          <a className={styles.section}>Join Us</a>
-          <a className={styles.subsection}>EXCO</a>
-          <a className={styles.subsection}>Committees</a>
-          <a className={styles.subsection}>Sub-Comms</a>
+          <a className={styles.section} href="">
+            Join Us
+          </a>
+          <a className={styles.subsection} href="">
+            EXCO
+          </a>
+          <a className={styles.subsection} href="">
+            Committees
+          </a>
+          <a className={styles.subsection} href="">
+            Sub-Comms
+          </a>
         </div>
         <div className={styles.ourWork}>
           <a className={styles.section} href={ROUTES.ourWork}>
             Our Work
           </a>
-          <a className={styles.subsection}>Policies</a>
-          <a className={styles.subsection}>Archives</a>
+          <a className={styles.subsection} href="">
+            Policies
+          </a>
+          <a className={styles.subsection} href="">
+            Archives
+          </a>
         </div>
         <div className={styles.events}>
           <a className={styles.section} href={ROUTES.events}>
@@ -45,28 +57,52 @@ const Footer = () => {
           <a className={styles.section} href={ROUTES.freshmen}>
             Freshmen
           </a>
-          <a className={styles.subsection}>Events</a>
-          <a className={styles.subsection}>Resources</a>
+          <a className={styles.subsection} href="">
+            Events
+          </a>
+          <a className={styles.subsection} href="">
+            Resources
+          </a>
         </div>
         <div className={styles.services}>
           <a className={styles.section} href={ROUTES.services}>
             Services
           </a>
-          <a className={styles.subsection}>Financial Aid</a>
-          <a className={styles.subsection}>Council Funding</a>
-          <a className={styles.subsection}>Logistics Rental</a>
-          <a className={styles.subsection}>Venue Booking</a>
-          <a className={styles.subsection}>Van Booking</a>
-          <a className={styles.subsection}>Publicity</a>
-          <a className={styles.subsection}>Licensing</a>
+          <a className={styles.subsection} href="">
+            Financial Aid
+          </a>
+          <a className={styles.subsection} href="">
+            Council Funding
+          </a>
+          <a className={styles.subsection} href="">
+            Logistics Rental
+          </a>
+          <a className={styles.subsection} href="">
+            Venue Booking
+          </a>
+          <a className={styles.subsection} href="">
+            Van Booking
+          </a>
+          <a className={styles.subsection} href="">
+            Publicity
+          </a>
+          <a className={styles.subsection} href="">
+            Licensing
+          </a>
         </div>
         <div className={styles.contact}>
           <a className={styles.section} href={ROUTES.contact}>
             Contact
           </a>
-          <a className={styles.subsection}>Map & Venue</a>
-          <a className={styles.subsection}>Info Details</a>
-          <a className={styles.subsection}>Inquiries</a>
+          <a className={styles.subsection} href="">
+            Map & Venue
+          </a>
+          <a className={styles.subsection} href="">
+            Info Details
+          </a>
+          <a className={styles.subsection} href="">
+            Inquiries
+          </a>
         </div>
       </div>
       <div className={styles.links}>
@@ -75,9 +111,18 @@ const Footer = () => {
           <img className={styles.logo} src={commitlogo} alt="CommIT Logo"></img>
         </div>
         <div className={styles.socials}>
-          <SocialIcon network="facebook"></SocialIcon>
-          <SocialIcon network="instagram"></SocialIcon>
-          <SocialIcon network="linkedin"></SocialIcon>
+          <SocialIcon
+            network="facebook"
+            url="https://www.facebook.com/nus.students.union/"
+          ></SocialIcon>
+          <SocialIcon
+            network="instagram"
+            url="https://www.instagram.com/mynussu"
+          ></SocialIcon>
+          <SocialIcon
+            network="linkedin"
+            url="https://www.linkedin.com/company/nussu"
+          ></SocialIcon>
         </div>
       </div>
       <hr />
