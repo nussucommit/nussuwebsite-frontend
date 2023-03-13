@@ -1,4 +1,5 @@
 import Navbar from "../Navbar";
+import Footer from "../Footer";
 import styles from "./home.module.css";
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
     <div className={styles.Home}>
       <Navbar />
       <p>Home Page</p>
+      <Footer />
     </div>
   );
 };

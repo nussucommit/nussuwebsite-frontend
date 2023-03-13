@@ -1,0 +1,115 @@
+.footer {
+  background-color: #182534 !important;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding-left: 2.5vw;
+  padding-right: 2.5vw;
+  font-family: "Lora";
+}
+
+.header {
+  align-self: flex-start;
+  font-weight: 600;
+  font-size: 1.5rem;
+  border-bottom: 0.005rem solid white;
+  padding-bottom: 1vh;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section {
+  color: white !important;
+  font-weight: 750;
+}
+
+.subsection {
+  color: white !important;
+}
+
+.aboutUs {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.joinUs {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.ourWork {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.events {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.freshmen {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.services {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+hr {
+  width: 100%;
+  margin-top: -1vh;
+  margin-bottom: -1vh;
+}
+
+.logo {
+  width: 250px;
+  height: 120px;
+}
+
+.socials {
+  display: flex;
+  gap: 2.5vw;
+}
+
+.nussulogo {
+  align-self: center;
+  height: 25px;
+  width: 100px;
+}
