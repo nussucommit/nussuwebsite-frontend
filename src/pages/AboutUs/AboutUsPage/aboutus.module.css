@@ -1,0 +1,61 @@
+.body {
+  margin: 0 2.5vw;
+}
+
+.header {
+  text-decoration: underline;
+  text-decoration-color: black;
+  text-decoration-thickness: 1px;
+  text-underline-position: under;
+  font-size: 2.5rem;
+}
+
+.odd {
+  color: #d9a129;
+}
+
+.even {
+  color: #3e3e3e;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 47.5vw 47.5vw;
+}
+
+.left {
+  width: 80%;
+}
+
+.subheader {
+  text-decoration: underline;
+  text-decoration-color: black;
+  text-decoration-thickness: 1px;
+  text-underline-position: under;
+  font-weight: lighter;
+  font-size: 2rem;
+}
+
+.vision {
+  margin-top: -10px;
+  font-size: 1.25rem;
+  color: #3e3e3e;
+}
+
+.mission {
+  margin-top: -10px;
+  font-size: 1.25rem;
+  color: #3e3e3e;
+}
+
+.photo {
+  width: 40vw;
+  height: 35vh;
+}
+
+.right {
+  width: 90%;
+  font-size: 1.25rem;
+  color: #3e3e3e;
+  margin-top: -15px;
+}
