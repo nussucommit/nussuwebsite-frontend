@@ -1,6 +1,7 @@
 import styles from "./aboutus.module.css";
 import photo from "../../../assets/nussu_group_photo.jpeg";
 import Navbar from "../../Navbar";
+import Footer from "../../Footer";
 
 const AboutUs = () => {
   const mock = {
@@ -43,6 +44,7 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
