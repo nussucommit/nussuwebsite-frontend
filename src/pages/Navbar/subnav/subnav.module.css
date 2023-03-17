@@ -28,11 +28,11 @@
   padding: 1.5vh 2vw;
 }
 
-a {
+.navitem {
   color: #3e3e3e;
   text-decoration: none;
 }
 
-a:hover {
+.navitem:hover {
   color: #b27d31;
 }

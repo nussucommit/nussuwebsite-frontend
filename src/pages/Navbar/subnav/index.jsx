@@ -7,12 +7,16 @@ const Subnav = ({ items }) => {
       {items.subNav ? (
         <>
           <div type="button" className={styles.mainNav}>
-            <a href={items.path}>{items.title}</a>
+            <a className={styles.navitem} href={items.path}>
+              {items.title}
+            </a>
           </div>
           <Dropdown submenus={items.subNav} className={styles.dropdown} />
         </>
       ) : (
-        <a href={items.path}>{items.title}</a>
+        <a className={styles.navitem} href={items.path}>
+          {items.title}
+        </a>
       )}
     </p>
   );
