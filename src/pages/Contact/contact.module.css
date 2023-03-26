@@ -1,0 +1,110 @@
+.body {
+  margin: 0 5vw;
+  font: "Lora";
+}
+
+.header {
+  margin-top: 5vh;
+  font-size: 2.5rem;
+  text-decoration: underline;
+  text-decoration-color: black;
+  text-decoration-thickness: 1px;
+  text-underline-position: under;
+  padding-bottom: 2vh;
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  margin-top: 5vh;
+  font-size: 2rem;
+  text-decoration: underline;
+  text-decoration-color: black;
+  text-decoration-thickness: 1px;
+  text-underline-position: under;
+  padding-bottom: 2vh;
+}
+
+.odd {
+  color: #d9a129;
+}
+
+.even {
+  color: #3e3e3e;
+}
+
+.map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mapcontent {
+  background-color: #3e3e3e;
+  height: 30vh;
+  width: 60vw;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5vh;
+  color: #3e3e3e;
+}
+
+.subheader {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.form {
+  background-color: #d9d9d9;
+  padding: 5vh 5vw;
+}
+
+.formData {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+.name,
+.email {
+  height: 5vh;
+  width: 25vw;
+  border: none;
+  border-radius: 2.5px;
+}
+
+.question {
+  height: 15vh;
+  width: 35vw;
+  border: none;
+  border-radius: 2.5px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submit {
+  height: 4vh;
+  width: 8vw;
+  border: none;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  padding-left: 1vw;
+}
+
+textarea::placeholder {
+  padding-top: 1vh;
+}
