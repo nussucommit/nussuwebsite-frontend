@@ -1,0 +1,76 @@
+.body {
+  margin: 0 2.5vw;
+  font: "Lora";
+  color: #3e3e3e;
+}
+
+.header,
+.subheader {
+  margin-top: 5vh;
+  font-size: 2.5rem;
+  text-decoration: underline;
+  text-decoration-color: black;
+  text-decoration-thickness: 1px;
+  text-underline-position: under;
+  padding-bottom: 2vh;
+}
+
+.odd {
+  color: #d9a129;
+}
+
+.even {
+  color: #3e3e3e;
+}
+
+.subheader {
+  font-size: 1.8rem;
+  padding-bottom: 0 !important;
+}
+
+.intro,
+.fopdesc {
+  font-size: 1.25rem;
+}
+
+.programsection {
+  display: flex;
+  flex-direction: row;
+  gap: 5vw;
+  padding: 0 2.5vw;
+}
+
+.program {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image {
+  background-color: #3e3e3e;
+  height: 25vh;
+  width: 12vw;
+  margin-top: 2.5vh;
+}
+
+.programtitle {
+  color: #d9a129;
+  font-size: 1.5rem;
+}
+
+.programdesc {
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.faq {
+  font-size: 1.25rem;
+}
+
+.question {
+  font-weight: 600;
+}
+
+.answer {
+  padding-bottom: 2.5vh;
+}
