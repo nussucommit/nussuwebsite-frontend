@@ -1,0 +1,62 @@
+.body {
+  margin: 0 2.5vw;
+  font: "Lora";
+  color: #3e3e3e;
+  font-family: "Lora";
+}
+
+.header {
+  margin-top: 5vh;
+  font-size: 2.5rem;
+  text-decoration: underline;
+  text-decoration-color: black;
+  text-decoration-thickness: 1px;
+  text-underline-position: under;
+  padding-bottom: 5vh;
+}
+
+.odd {
+  color: #d9a129;
+}
+
+.even {
+  color: #3e3e3e;
+}
+
+.teamgrid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 5vw;
+  padding-bottom: 5vh;
+}
+
+.member {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  background-color: #3e3e3e;
+  height: 20vh;
+  width: 10vw;
+}
+
+.name {
+  color: #d9a129;
+  font-size: 2rem;
+  margin-bottom: -10px;
+}
+
+.position,
+.committee {
+  color: #3e3e3e;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: -10px;
+}
+
+.email {
+  font-size: 1.25rem;
+}
