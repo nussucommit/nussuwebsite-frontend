@@ -1,0 +1,81 @@
+.announcement {
+  color: #3e3e3e;
+  background-color: rgb(178, 125, 49, 0.5);
+  padding: 0.5vh 0.5vw;
+  font-size: 1.5rem;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  justify-content: center;
+  align-items: center;
+  background-color: #d9d9d9;
+}
+
+.quote {
+  font-size: 5rem;
+  padding-left: 5vw;
+}
+
+.image {
+  width: 40vw;
+  height: 20vh;
+  padding-left: 10vw;
+}
+
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5vh 0;
+  flex-flow: column wrap;
+}
+
+.events {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2.5vh 0;
+}
+
+.slider {
+  object-fit: contain;
+}
+
+.eventsheader {
+  color: #3e3e3e;
+  font-size: 3.5rem;
+}
+
+.socialheader {
+  margin-top: 5vh;
+  font-size: 3.5rem;
+  text-decoration: underline;
+  text-decoration-color: black;
+  text-decoration-thickness: 1px;
+  text-underline-position: under;
+  padding: 5vh 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.odd {
+  color: #3e3e3e !important;
+  font-size: 3.5rem;
+}
+
+.even {
+  color: #d9a129 !important;
+  font-size: 3.5rem;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  padding: 5vh;
+}
