@@ -1,5 +1,7 @@
 export const Routes = {
+  backendRoot: "http://127.0.0.1:8000",
   index: "/",
+  home: "/home",
   aboutUs: "/aboutus",
   governance: "/aboutus/governance",
   history: "/aboutus/history",

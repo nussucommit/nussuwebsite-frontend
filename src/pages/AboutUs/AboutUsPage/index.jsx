@@ -1,9 +1,14 @@
 import styles from "./aboutus.module.css";
+import Maintenance from "../../Maintenance";
+import Navbar from "../../Navbar";
+import Footer from "../../Footer";
 
 const AboutUs = () => {
   return (
     <div className={styles.AboutUs}>
-      <p>About Us Page</p>
+      <Navbar />
+      <Maintenance />
+      <Footer />
     </div>
   );
 };
