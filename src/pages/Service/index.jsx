@@ -1,9 +1,14 @@
 import styles from "./service.module.css";
+import Maintenance from "../Maintenance";
+import Navbar from "../Navbar";
+import Footer from "../Footer";
 
 const Service = () => {
   return (
     <div className={styles.Service}>
-      <p>Service Page</p>
+      <Navbar />
+      <Maintenance />
+      <Footer />
     </div>
   );
 };

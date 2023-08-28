@@ -1,9 +1,14 @@
 import styles from "./ourteam.module.css";
+import Maintenance from "../../Maintenance";
+import Navbar from "../../Navbar";
+import Footer from "../../Footer";
 
 const OurTeam = () => {
   return (
     <div className={styles.OurTeam}>
-      <p>Our Team Page</p>
+      <Navbar />
+      <Maintenance />
+      <Footer />
     </div>
   );
 };
