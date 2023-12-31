@@ -24,11 +24,8 @@ export const extractPersonsData = (data) => {
 		}
 		if (item.type === "paragraph") {
 			const emailData = item.content[0];
-			const parsedEmail = {
-				text: emailData.content,
-				link: emailData.attribute.link
-			}
-			currentPerson.email = parsedEmail;
+			currentPerson.email = emailData.content;
+			currentPerson.emailHyperlink = emailData.attribute.link;
 			personsData.push({...currentPerson});
 			currentPerson = {};
 			headingCounter = 0;

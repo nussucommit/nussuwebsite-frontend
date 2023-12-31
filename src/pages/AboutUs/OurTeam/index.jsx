@@ -13,7 +13,9 @@ const OurTeam = () => {
   return (
     <div className={styles.OurTeam}>
       <Navbar />
-      <PersonCard />
+      {isLoading 
+	    ? <div></div>
+		: personsData.map((item) => <PersonCard name={item.name} position={item.position} email={item.email} emailHyperlink={item.emailHyperlink}/>)}
       <Footer />
     </div>
   );
