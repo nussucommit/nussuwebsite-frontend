@@ -14,12 +14,12 @@ const OurTeam = () => {
   return (
     <div>
       <Navbar />
-	  <div className="wrapper">
-	  {isLoading 
-	    ? <div></div>
-		: personsData.map((item) => <PersonCard name={item.name} position={item.position} email={item.email} emailHyperlink={item.emailHyperlink}/>)}
-	  </div>
-	  <Footer />
+    <div className="wrapper">
+    {isLoading 
+      ? <div></div>
+    : personsData.map((item) => <PersonCard name={item.name} position={item.position} email={item.email} emailHyperlink={item.emailHyperlink}/>)}
+    </div>
+    <Footer />
     </div>
   );
 };

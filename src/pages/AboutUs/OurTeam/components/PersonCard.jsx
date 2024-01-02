@@ -8,15 +8,15 @@ const PersonCard = (props) => {
   const emailHyperlink = props.emailHyperlink;
 
   return (
-	<div className="person-card">
-		<img className="person-image" src="" alt="personImage" />
-		<div className="person-name">{name}</div>
-		<div className="person-position">{position}</div>
-		<div className="person-represent">NONE</div>
-		<div className="person-email">
-			<a href={emailHyperlink}>{email}</a>
-		</div>
-	</div>
+  <div className="person-card">
+    <img className="person-image" src="" alt="personImage" />
+    <div className="person-name">{name}</div>
+    <div className="person-position">{position}</div>
+    <div className="person-represent">NONE</div>
+    <div className="person-email">
+      <a href={emailHyperlink}>{email}</a>
+    </div>
+  </div>
   )
 }
 

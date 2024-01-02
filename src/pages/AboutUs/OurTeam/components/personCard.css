@@ -1,57 +1,57 @@
 .person-card {
-	background-color: black;
-	display: flex;
-	flex-direction: column;
-	width: 480px;
-	height: 679px;
-	padding: 30px 30px;
-	text-align: center;
-	align-items: center;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  width: 480px;
+  height: 679px;
+  padding: 30px 30px;
+  text-align: center;
+  align-items: center;
 }
 
 .person-image {
-	background-color: rgb(209, 115, 115);
-	width: 385.45px;
-	height: 410.2px;
-	padding: 2px;
-	margin: 4px;
+  background-color: rgb(209, 115, 115);
+  width: 385.45px;
+  height: 410.2px;
+  padding: 2px;
+  margin: 4px;
 }
 
 .person-name {
-	background-color: bisque;
-	width: 480px;
-	padding: 2px;
-	margin: 4px;
-	font-size: 48px;
-	font-weight: 400;
-	text-align: center;
+  background-color: bisque;
+  width: 480px;
+  padding: 2px;
+  margin: 4px;
+  font-size: 48px;
+  font-weight: 400;
+  text-align: center;
 }
 
 .person-position {
-	background-color: aqua;
-	width: 460px;
-	padding: 2px;
-	margin: 4px;
-	font-size: 36px;
-	font-weight: 700;
-	text-align: center;
+  background-color: aqua;
+  width: 460px;
+  padding: 2px;
+  margin: 4px;
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
 }
 
 .person-represent {
-	background-color: rgb(43, 190, 240);
-	width: 460px;
-	padding: 2px;
-	margin: 4px;
-	font-size: 36px;
-	font-weight: 700;
-	text-align: center;
+  background-color: rgb(43, 190, 240);
+  width: 460px;
+  padding: 2px;
+  margin: 4px;
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
 }
 
 .person-email {
-	width: 460px;
-	padding: 2px;
-	margin: 4px;
-	background-color: blueviolet;
-	font-size: 30px;
-	font-weight: 400;
+  width: 460px;
+  padding: 2px;
+  margin: 4px;
+  background-color: blueviolet;
+  font-size: 30px;
+  font-weight: 400;
 }
