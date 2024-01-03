@@ -82,6 +82,7 @@ export const extractPersonsData = (data) => {
 const isCell = (item) => {
   return item.content.toString().toLowerCase().includes("cell");
 }
+
 const isNullCell = (cell) => {
   return cell.cellName == null;
 }
