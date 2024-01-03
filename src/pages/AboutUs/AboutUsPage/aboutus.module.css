@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400&display=swap');
+
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -8,7 +10,6 @@
 .header {
     font-size: 5vw; 
     font-family: 'Lora';
-    font-weight: 400;
     margin-top: 6vh; 
     margin-left: 4vw; 
     position: relative;
@@ -17,14 +18,14 @@
 .header::before {
     content: 'About';
     color: #3E3E3E;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); 
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 1); 
     margin-right: 1vw;
 }
   
 .header::after {
     content: 'Us';
     color: #D9A129; 
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
 }
 
 .leftcolumn {
@@ -50,7 +51,6 @@
 .missionheader {
   font-size: 3vw; 
   font-family: 'Lora';
-  font-weight: 400;
   margin-top: 5vw; 
 }
 
@@ -73,7 +73,7 @@
 
 .horizontalLine {
   width: 80%; 
-  max-width: 20vw;
+  max-width: 21vw;
   height: 0.2vh;
   background-color: #000;
   margin-top: 1vw; 
@@ -95,7 +95,6 @@
 .missioncontent {
     font-size: 1.6vw; 
     font-family: 'Lora';
-    font-weight: 400;
     margin-top: 3vw; 
     margin-bottom: 6vh; 
 }
@@ -103,7 +102,6 @@
 .maincontent {
   font-size: 1.7vw; 
   font-family: 'Lora';
-  font-weight: 400;
   text-align: justify;
   margin-top: 2vw; 
   margin-bottom: 10vh; 
