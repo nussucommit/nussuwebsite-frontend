@@ -11,7 +11,7 @@ const OurTeam = () => {
   const [isLoading, content] = useFetchData(url);
   const personsData = extractPersonsData(content);
   return (
-    <div>
+    <div className="container">
       <Navbar />
     <div className="wrapper">
     {isLoading 

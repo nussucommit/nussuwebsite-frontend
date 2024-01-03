@@ -9,9 +9,12 @@ const CellCard = (props) => {
 
   return (
   <div className="cell-card">
-    <div className="cell-name">{cellName}</div>
+    <div className="cell-name">
+      {cellName}
+      <div className="divider"></div>
+    </div>
     <img className="cell-image" src={image} alt="cell-image" />
-    {members.map((person) => <PersonCard name={person.name} position={person.position} email={person.email} emailHyperlink={person.emailHyperlink}/>)}
+    {members.map((person) => <PersonCard className="cell-members" name={person.name} position={person.position} email={person.email} emailHyperlink={person.emailHyperlink}/>)}
   </div>
   )
 }
