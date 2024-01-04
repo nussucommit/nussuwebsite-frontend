@@ -1,5 +1,5 @@
 import React from 'react'
-import './personCard.css'
+import styles from './personcard.module.css'
 
 const PersonCard = (props) => {
   const name = props.name;
@@ -8,10 +8,10 @@ const PersonCard = (props) => {
   const emailHyperlink = props.emailHyperlink;
 
   return (
-    <div className="person-card">
-      <div className="person-position">{position}</div>
-      <div className="person-name">{name}</div>
-      <a className="person-email" href={emailHyperlink}>{email}</a>
+    <div className={styles.personcard}>
+      <div className={styles.personposition}>{position}</div>
+      <div className={styles.personname}>{name}</div>
+      <a className={styles.personemail} href={emailHyperlink}>{email}</a>
     </div>
   )
 }

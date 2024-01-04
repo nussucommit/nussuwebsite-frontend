@@ -1,20 +1,24 @@
 import React from 'react'
 import PersonCard from './Person/PersonCard'
-import './cellCard.css'
+import styles from './cellcard.module.css'
 
 const CellCard = (props) => {
   const cellName = props.cellName;
+  const cellNameArray = cellName.split(" ");
   const image = props.image;
   const members = props.members;
 
   return (
-  <div className="cell-card">
-    <div className="cell-name">
-      {cellName}
-      <div className="divider"></div>
+  <div className={styles.cellcard}>
+    <div className={styles.cellname}>
+      <div>
+        {cellNameArray.map(word =>
+            <span className={cellNameArray.indexOf(word)%2 == 0 ? styles.odd : styles.even}>{word}&nbsp;</span>)}
+      </div>
+      <div className={styles.divider}></div>
     </div>
-    <img className="cell-image" src={image} alt="cell-image" />
-    {members.map((person) => <PersonCard className="cell-members" name={person.name} position={person.position} email={person.email} emailHyperlink={person.emailHyperlink}/>)}
+    <img className={styles.cellimage} src={image} alt="cell-image" />
+    {members.map((person) => <PersonCard name={person.name} position={person.position} email={person.email} emailHyperlink={person.emailHyperlink}/>)}
   </div>
   )
 }
