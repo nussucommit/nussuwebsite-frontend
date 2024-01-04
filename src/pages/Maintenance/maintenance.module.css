@@ -4,7 +4,7 @@
 }
 
 .background {
-  background-image: url('/Users/wulalasmacbook/Desktop/commit/test/nussuwebsite-frontend/src/pages/Maintenance/maintenance bg.jpg');
+  background-image: url('/src/pages/Maintenance/maintenance bg.jpg');
   background-size: cover ; /* Cover the entire viewport */
   background-repeat: no-repeat; /* Prevent repeating the image */
   background-position: center; 
