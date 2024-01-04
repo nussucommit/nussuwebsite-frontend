@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'Lora';
+    src: url('/Users/wulalasmacbook/Desktop/commit/test/nussuwebsite-frontend/src/pages/AboutUs/PresidentMessage/Lora-Regular.ttf') format('truetype');
+  }
+  
+.container {
+    width: 80vw;
+    margin: auto; /* this centers the container, as the left and right margins are automatically equalised*/ 
+}
+.orangeText {
+    color: #D9A129;
+}
+
+.General {
+    color: #3E3E3E;
+    font-family: 'Lora'; 
+    
+
+}
+
+.myImage {
+    width: 100%;  
+    height: auto; 
+  }
+
+.textTitle {
+    font-weight: 400;
+    font-size: 80px;
+}
+
+.textSubtitle {
+    font-weight: 700;
+    font-size: 32px; 
+}
+
+.textBody {
+    font-weight: 400;
+    font-size: 24px; 
+}
+
+

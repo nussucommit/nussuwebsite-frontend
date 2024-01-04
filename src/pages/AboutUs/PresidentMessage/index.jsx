@@ -2,15 +2,73 @@ import styles from "./president.module.css";
 import Maintenance from "../../Maintenance";
 import Navbar from "../../Navbar";
 import Footer from "../../Footer";
+//import { useFetchData } from "../../common/useFetchData";
+//import { Routes } from "../../constants/routes";
+import {
+  content 
+} from "./PM_helper"; // to be deleted when data can be fetched from backend 
 
-const PresidentMessage = () => {
+//const url = Routes.backendRoot + Routes.presidentMessage;
+//const [isLoading, content] = useFetchData(url);
+
+const presidentsMessage = () => {
   return (
-    <div className={styles.PresidentMessage}>
-      <Navbar />
-      <Maintenance />
-      <Footer />
+    <div>
+    <Navbar />
+    <div className = {styles.textGeneral}>
+    <div className = {styles.container}>
+    
+    <h1 className = {styles.textTitle}> <br></br> President's<span className={styles.orangeText}>Message</span></h1>
+    <svg width="395" height="1" viewBox="0 0 395 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <line y1="0.5" x2="395" y2="0.5" stroke="black"/>
+    </svg>
+    
+
+    <div className = {styles.textBody}>
+    {content.map((item, index) => {
+        switch (item.type) {
+          case 'heading':
+            return <h3 key={index} className = {styles.subTitle}>{item.content}</h3>;
+          case 'paragraph':
+            return (
+              <p key={index} >
+                {item.content.map((textItem, textIndex) => {
+                  if (textItem.attribute && textItem.attribute.link) {
+                    return <a key={textIndex} href={textItem.attribute.link}>{textItem.content}</a>;
+                  } else if (textItem.attribute && textItem.attribute.bold) {
+                    return <strong key={textIndex}>{textItem.content}</strong>;
+                  } else if (textItem.attribute && textItem.attribute.italic) {
+                    return <em key={textIndex}>{textItem.content}</em>;
+                  } else {
+                    return <span key={textIndex}>{textItem.content}</span>;
+                  }
+                })}
+              </p>
+            );
+          case 'image':
+            return <img key={index} src={item.content} alt="Content" />;
+          case 'bulleted_list_item':
+            return (
+              <ul key={index}>
+                {item.content.map((listItem, listIndex) => (
+                  <li key={listIndex}>{listItem.content}</li>
+                ))}
+              </ul>
+            );
+          default:
+            return null;
+        }
+      })}
+      </div>
+      </div>
+    </div>
+    <Footer />
     </div>
   );
 };
 
-export default PresidentMessage;
+export default presidentsMessage;
+
+// the data cannot be fetched from the backend due to use of vpn (or maybe its just not accessible from China mainland )
+// so I pasted the contents as they are in the PM-helper.jsx file 
+// will change it when I'm back to Singapore 
