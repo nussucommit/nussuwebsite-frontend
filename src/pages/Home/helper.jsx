@@ -9,13 +9,12 @@ export const extractAnnouncement = (data) => {
       }
     }
   }
-
+  console.log(extractedText);
   return extractedText;
 };
 
 export const extractBannerImages = (data) => {
   const bannerImages = [];
-
   let foundBannerHeading = false;
 
   for (const item of data) {
