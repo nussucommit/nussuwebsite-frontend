@@ -11,7 +11,7 @@
   width: 80%;
   max-width: 700px;
   font-family: 'Lora', serif;
-  font-size: 40px;
+  font-size: 5vw;
   font-weight: 400;
 
   padding: 2px 0px;
@@ -34,10 +34,17 @@
 
 .divider {
   display: flex;
-  width: 200px;
+  width: 26vw;
+  max-width: 200px;
   height: 1px;
   background-color: black;
   margin-top: 10px;
   margin-bottom: 30px;
   align-self: left;
+}
+
+@media screen and (min-width: 800px) {
+  .cellname {
+    font-size: 40px;
+  }
 }
