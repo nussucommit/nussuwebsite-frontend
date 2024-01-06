@@ -1,0 +1,62 @@
+.personcard {
+  font-family: 'Lora', serif;
+  width: 80%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.personposition {
+  width: 100%;
+  max-width: 700px;
+  margin-top: 30px;
+  font-size: 4.5vw;
+  font-weight: 700;
+}
+
+.personname {
+  width: 100%;
+  max-width: 700px;
+  margin-top: 20px;
+  font-size: 4vw;
+  font-weight: 400;
+  color: #D9A129;
+  ;
+}
+
+.personemail:link {
+  width: 100%;
+  max-width: 700px;
+  margin-top: 10px;
+  font-size: 3vw;
+  font-weight: 400;
+  color: black;
+}
+
+.personemail:visited {
+  color:black
+}
+
+.personemail:hover {
+  color:grey
+}
+
+@media screen and (min-width: 800px) {
+  .personcard {
+    max-width: 1000px;
+  }
+
+  .personposition {
+    font-size: 28px;
+    max-width: 1000px;
+  }
+
+  .personname {
+    font-size: 22px;
+  }
+
+  .personemail:link {
+    font-size: 14px;
+  }
+}
