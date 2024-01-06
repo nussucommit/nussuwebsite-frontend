@@ -1,0 +1,10 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 70px;
+}
+
+.container {
+  background: #F5F5F5;
+}
