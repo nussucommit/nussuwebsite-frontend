@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Lora';
-    src: url('/src/pages/AboutUs/PresidentMessage/Lora-Regular.ttf') format('truetype');
+    src: url('../src/pages/AboutUs/PresidentMessage/Lora-Regular.ttf') format('truetype');
   }
   
 .container {
