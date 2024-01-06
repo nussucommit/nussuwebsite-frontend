@@ -1,0 +1,55 @@
+.cellcard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 2px;
+  margin-top: 40px;
+}
+
+.cellname {
+  width: 80%;
+  max-width: 700px;
+  font-family: 'Lora', serif;
+  font-size: 7vw;
+  font-weight: 400;
+
+  padding: 2px 0px;
+}
+
+.even {
+  color:#D9A129
+}
+
+.odd {
+  color:black
+}
+
+.cellimage {
+  width: 80%;
+  max-width: 700px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.divider {
+  display: flex;
+  width: 26vw;
+  max-width: 200px;
+  height: 1px;
+  background-color: black;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  align-self: left;
+}
+
+@media screen and (min-width: 800px) {
+  .cellname {
+    font-size: 5vh;
+    max-width: 1000px;
+  }
+
+  .cellimage {
+    max-width: 1000px;
+  }
+}
