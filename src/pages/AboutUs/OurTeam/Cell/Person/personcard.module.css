@@ -42,7 +42,7 @@
   color:grey
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 600px) {
   .personcard {
     max-width: 1000px;
   }
