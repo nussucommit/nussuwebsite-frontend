@@ -1,0 +1,106 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6vw;
+    position: relative;
+}
+
+.header {
+    font-size: 5vw; 
+    font-family: 'Lora', serif;
+    margin-top: 6vh; 
+    margin-left: 4vw; 
+    position: relative;
+}
+  
+.header::before {
+    content: 'About';
+    color: #3E3E3E;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 1); 
+    margin-right: 1vw;
+}
+  
+.header::after {
+    content: 'Us';
+    color: #D9A129; 
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+}
+
+.leftcolumn {
+    grid-column: 1 / 2;
+    margin-left: 4vw; 
+}
+  
+
+.rightcolumn {
+    grid-column: 2 / 3;
+    margin-right: 4vw; 
+}
+
+
+.image {
+    width: 100%; 
+    height: auto; 
+    margin-top: 2.5vw; 
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.visionheader,
+.missionheader {
+  font-size: 3vw; 
+  font-family: 'Lora', serif;
+  margin-top: 12vw; 
+}
+
+.visionheader::before,
+.missionheader::before {
+    content: 'Our';
+    color: #3E3E3E;
+    margin-right: 1vw;
+}
+
+.visionheader::after {
+    content: 'Vision';
+    color: #D9A129; 
+}
+  
+.missionheader::after {
+    content: 'Mission';
+    color: #D9A129; 
+}
+
+.horizontalLine {
+  width: 80%; 
+  max-width: 21vw;
+  height: 0.2vh;
+  background-color: #000;
+  margin-top: 1vw; 
+  margin-bottom: 3vh; 
+  margin-left: 4vw;
+}
+
+.horizontalLine2 {
+  width: 80%; 
+  max-width: 20vw; 
+  height: 0.2vh;
+  background-color: #000;
+  margin-top: 1vw; 
+  margin-bottom: 4vh; 
+  position: absolute;
+}
+
+.visioncontent,
+.missioncontent {
+    font-size: 1.6vw; 
+    font-family: 'Lora', serif;
+    margin-top: 3vw; 
+    margin-bottom: 6vh; 
+}
+
+.maincontent {
+  font-size: 1.7vw; 
+  font-family: 'Lora', serif;
+  text-align: justify;
+  margin-top: 2vw; 
+  margin-bottom: 10vh; 
+}
