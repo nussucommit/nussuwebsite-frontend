@@ -21,13 +21,15 @@ const Home = () => {
   const bannerImages = extractBannerImages(content);
   const eventsImages = extractEventsImages(content);
   const instagramUrls = extractInstagramUrls(content);
-  let [width, setWidth] = useState(0.8*window.innerWidth);
-  let [height, setHeight] = useState(0.4*window.innerWidth);
+  let [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  let [bannerWidth, setBannerWidth] = useState(0.8*window.innerWidth);
+  let [bannerHeight, setBannerHeight] = useState(0.4*window.innerWidth);
 
   useEffect(() => {
     const handleWindowResize = () => {
-      setWidth(0.8*window.innerWidth);
-      setHeight(0.4*window.innerWidth);
+      setWindowWidth(window.innerWidth)
+      setBannerWidth(0.8*window.innerWidth);
+      setBannerHeight(0.4*window.innerWidth);
     };
 
     window.addEventListener('resize', handleWindowResize);
@@ -53,8 +55,8 @@ const Home = () => {
           ? <div></div>
           : <SimpleImageSlider
               className={styles.slider}
-              width={width}
-              height={height}
+              width={bannerWidth}
+              height={bannerHeight}
               images={bannerImages}
               showNavs={true}
               autoPlay={true}
@@ -62,13 +64,13 @@ const Home = () => {
         }
       </div>
       <div className={styles.events}>
-        <p className={styles.eventsheader}>Events</p>
+        <p className={styles.eventsheader}>EVENTS</p>
         {isLoading
           ? <div></div>
           : <SimpleImageSlider
               className={styles.slider}
-              width={width}
-              height={height}
+              width={bannerWidth}
+              height={bannerHeight}
               images={eventsImages}
               showNavs={true}
               autoPlay={true}
@@ -77,13 +79,17 @@ const Home = () => {
       </div>
       <div className={styles.socialheader}>
         <span className={styles.odd}>Follow</span>
-        <span className="space"></span>
+        &nbsp;
         <span className={styles.even}>Us</span>
       </div>
       <div className={styles.container}>
-        {instagramUrls.map((url, index) => (
-          <InstagramEmbed url={url} width={350} height={"50vh"} />
-        ))}
+        {windowWidth < 100
+          ? instagramUrls.map((url, index) => (
+              <InstagramEmbed className={styles.embed} url={url} width={"40vw"} height={"60vw"}/>
+            ))
+          : instagramUrls.map((url, index) => (
+            <InstagramEmbed className={styles.embed} url={url} width={"350px"} />
+          ))}
       </div>
       <Footer />
     </div>
