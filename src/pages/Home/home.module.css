@@ -6,7 +6,7 @@
   font-family: 'Lora', serif;
   color: #3E3E3E;
   -webkit-text-stroke: 1px black;
-  text-shadow: 2px 2px #00000040;
+  text-shadow: 2px 2px #82828240;
 }
 
 .header {
@@ -110,7 +110,7 @@
   }
 }
 
-@media screen and (min-width: 1330px) {
+@media screen and (min-width: 900px) {
   .header {
     display: grid;
     justify-content: center;
@@ -126,7 +126,7 @@
   .quote {
     margin-top: 70px;
     margin-bottom: 70px;
-    font-size: 5rem;
+    font-size: 5.5vw;
     padding-left: 4.5vw;
   }
 }
