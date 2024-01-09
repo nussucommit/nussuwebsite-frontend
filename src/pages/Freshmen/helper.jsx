@@ -20,9 +20,33 @@ export const extractFOPDesc = (data) => {
   for (const item of data) {
     if (Array.isArray(item.content)) {
       extractedText = item.content[0].content;
+      break;
     }
-    break;
   }
+  return extractedText;
+};
+
+export const extractFOPNUS = (data) => {
+  let extractedText = "";
+  for (const item of data) {
+    if (item.content === "FOPs IN NUS") {
+      extractedText = item.content;
+    }
+  }
+  return extractedText;
+};
+
+export const extractFOPTypeDesc = (data) => {
+  let extractedText = [];
+  for (const item of data) {
+    if (Array.isArray(item.content) && item.content.length === 3) {
+      for (const desc of item.content) {
+        extractedText.push(desc.content);
+      }
+      break;
+    }
+  }
+  console.log(extractedText);
   return extractedText;
 };
 
@@ -30,37 +54,32 @@ export const extractNexus = (data) => {
   let headingCount = 0;
   let extractedText = []; // treat Nexus title and description as one thing since they are unseperatable
   for (const item of data) {
-    if (item.type === "heading" && item.content === "WHAT IS NEXUS?") {
-      extractedText.push(item.content);
-    }
     if (headingCount === 1) {
       extractedText.push(item.content[0].content);
       break;
     }
-    headingCount++;
+    if (item.type === "heading" && item.content === "WHAT IS NEXUS?") {
+      extractedText.push(item.content);
+      headingCount++;
+    }
   }
+  return extractedText;
 };
 
 export const extractFOPCategory = (data) => {
   let extractedText = [];
   let extractedLink = "";
-  let headingCount = 0;
   for (const item of data) {
     const content = item.content;
-    if (headingCount === 1) {
-      for (const item of content) {
-        if ("link" in item.attribute) {
-          extractedLink = item.attribute.link;
-        }
-        extractedText.push(item.content);
-      }
-      break;
-    }
-    if (Array.isArray(content) && content.length === 3) {
+    if (
+      Array.isArray(content) &&
+      content.length === 3 &&
+      content[1].attribute.link !== undefined
+    ) {
       for (const item of content) {
         extractedText.push(item.content);
       }
-      headingCount++;
+      extractedLink = content[1].attribute.link;
     }
   }
   return [extractedText, extractedLink];
@@ -72,24 +91,31 @@ export const extractFAQ = (data) => {
   let extractedAnswer = [];
   let start = false;
   for (const item of data) {
-    if (Array.isArray(item.content) && item.content.length === 0 && start) {
+    if (start && Array.isArray(item.content) && item.content.length === 0) {
       break;
     }
     if (start && !Array.isArray(item.content)) {
-      console.log(1111);
-      console.log(item.content);
       extractedQuestion.push(item.content);
     }
     if (start && Array.isArray(item.content)) {
-      console.log(2222);
-      console.log(item.content);
-      extractedAnswer.push(item.content);
+      extractedAnswer.push(item.content[0].content);
     }
     if (item.content === "FAQs") {
       FAQTitle = item.content;
       start = true;
     }
   }
-  console.log([FAQTitle, extractedAnswer, extractedQuestion]);
   return [FAQTitle, extractedAnswer, extractedQuestion];
+};
+
+export const extractTypesOfCamps = (data) => {
+  let typeName = [];
+  let typeDesc = [];
+  for (const item of data) {
+    if (item.type === "numbered_list_item") {
+      typeName.push(item.content[0].content);
+      typeDesc.push(item.content[1].content);
+    }
+  }
+  return [typeName, typeDesc];
 };

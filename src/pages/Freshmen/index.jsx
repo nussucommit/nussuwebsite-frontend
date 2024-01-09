@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "./freshmen.module.css";
 import Maintenance from "../Maintenance";
 import Navbar from "../Navbar";
@@ -10,6 +11,9 @@ import {
   extractFOPDesc,
   extractNexus,
   extractFOPCategory,
+  extractTypesOfCamps,
+  extractFOPNUS,
+  extractFOPTypeDesc,
 } from "./helper";
 
 const Freshmen = () => {
@@ -20,12 +24,24 @@ const Freshmen = () => {
   const Nexus = extractNexus(content);
   const FOPCategory = extractFOPCategory(content);
   const FAQ = extractFAQ(content);
+  const CampTypes = extractTypesOfCamps(content);
+  const FOPNUS = extractFOPNUS(content);
+  const FOPTypeDesc = extractFOPTypeDesc(content);
 
   return (
     <div className={styles.Freshmen}>
       <Navbar />
-      <Maintenance />
+      <div className={styles.header}>
+        <span>{FOP[0]}</span>
+      </div>
       <hr className={styles.horizontalLine} />
+      <div className={styles.title}>{FOP[1]}</div>
+      <hr className={styles.horizontalLine} />
+      <div className={styles.content}>{FOPDesc} </div>
+      <div className={styles.title}>{FOPNUS}</div>
+      <hr className={styles.horizontalLine} />
+      <div className={styles.content}>{FOPTypeDesc} </div>
+
       <Footer />
     </div>
   );
