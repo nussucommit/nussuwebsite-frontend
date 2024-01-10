@@ -10,23 +10,24 @@
 }
 
 .header {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  justify-content: center;
   align-items: center;
+  grid-template-columns: 40% 60%;
   background-color: #d9d9d9;
 }
 
 .quote {
-  margin-top: 3vw;
-  margin-bottom: 1.5vw;
-  font-size: 7vw;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 5.5vw;
+  padding-left: 4.5vw;
   font-family: 'Lora', serif;
 }
 
 .image {
-  width: 60%;
-  margin-top: 1.5vw;
-  margin-bottom: 3vw;
+  width: 40vw;
+  padding-left: 10vw;
 }
 
 .banner {
@@ -34,7 +35,7 @@
   justify-content: center;
   align-items: center;
   padding-top: 10vh;
-  flex-flow: column wrap;
+  flex-direction: column;
 }
 
 .events {
@@ -86,11 +87,6 @@
   padding-bottom: 5vh;
 }
 
-.embed {
-  padding: 1vw;
-  width: 50%;
-}
-
 @media screen and (max-width: 850px) {
 
   .container {
@@ -104,29 +100,11 @@
     font-size: 35px;
     padding-bottom: 0;
   }
-
-  .embed {
-    padding: 1vh;
-  }
 }
 
-@media screen and (min-width: 900px) {
-  .header {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    grid-template-columns: 40% 60%;
+@media screen and (max-width: 600px) {
+  .announcement {
+    font-size: 2.6vw;
   }
 
-  .image {
-    width: 40vw;
-    padding-left: 10vw;
-  }
-
-  .quote {
-    margin-top: 70px;
-    margin-bottom: 70px;
-    font-size: 5.5vw;
-    padding-left: 4.5vw;
-  }
 }

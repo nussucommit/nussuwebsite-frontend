@@ -15,6 +15,8 @@ import {
 import { InstagramEmbed } from "react-social-media-embed";
 
 const Home = () => {
+  const bannerLimit = 480;
+  const embedLimit = 360;
   const url = Routes.backendRoot + Routes.home;
   const [isLoading, content] = useFetchData(url);
   const announcement = extractAnnouncement(content);
@@ -22,14 +24,19 @@ const Home = () => {
   const eventsImages = extractEventsImages(content);
   const instagramUrls = extractInstagramUrls(content);
   let [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  let [bannerWidth, setBannerWidth] = useState(0.8*window.innerWidth);
-  let [bannerHeight, setBannerHeight] = useState(0.4*window.innerWidth);
+  let [bannerWidth, setBannerWidth] = useState(window.innerWidth < bannerLimit ? 0.9*window.innerWidth : 0.8*window.innerWidth);
+  let [bannerHeight, setBannerHeight] = useState(window.innerWidth < bannerLimit ? 0.45*window.innerWidth : 0.4*window.innerWidth);
 
   useEffect(() => {
     const handleWindowResize = () => {
       setWindowWidth(window.innerWidth)
-      setBannerWidth(0.8*window.innerWidth);
-      setBannerHeight(0.4*window.innerWidth);
+      if (window.innerWidth < bannerLimit) {
+        setBannerWidth(0.9*window.innerWidth);
+        setBannerHeight(0.45*window.innerWidth);
+      } else {
+        setBannerWidth(0.8*window.innerWidth);
+        setBannerHeight(0.4*window.innerWidth);
+      }
     };
 
     window.addEventListener('resize', handleWindowResize);
@@ -83,12 +90,12 @@ const Home = () => {
         <span className={styles.even}>Us</span>
       </div>
       <div className={styles.container}>
-        {windowWidth < 100
+        {windowWidth < embedLimit
           ? instagramUrls.map((url, index) => (
-              <InstagramEmbed className={styles.embed} url={url} width={"40vw"} height={"60vw"}/>
+              <InstagramEmbed url={url} width="100%"/>
             ))
           : instagramUrls.map((url, index) => (
-            <InstagramEmbed className={styles.embed} url={url} width={"350px"} />
+              <InstagramEmbed url={url} width={350} />
           ))}
       </div>
       <Footer />
