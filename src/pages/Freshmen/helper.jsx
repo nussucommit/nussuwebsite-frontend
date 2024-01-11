@@ -46,7 +46,6 @@ export const extractFOPTypeDesc = (data) => {
       break;
     }
   }
-  console.log(extractedText);
   return extractedText;
 };
 
@@ -87,35 +86,35 @@ export const extractFOPCategory = (data) => {
 
 export const extractFAQ = (data) => {
   let FAQTitle = "";
-  let extractedQuestion = [];
-  let extractedAnswer = [];
+  let extractedFAQ = [];
   let start = false;
+  let count = 0;
   for (const item of data) {
     if (start && Array.isArray(item.content) && item.content.length === 0) {
       break;
     }
     if (start && !Array.isArray(item.content)) {
-      extractedQuestion.push(item.content);
+      extractedFAQ[count] = extractedFAQ[count] || [];
+      extractedFAQ[count].push(item.content);
     }
     if (start && Array.isArray(item.content)) {
-      extractedAnswer.push(item.content[0].content);
+      extractedFAQ[count].push(item.content[0].content);
+      count++;
     }
     if (item.content === "FAQs") {
       FAQTitle = item.content;
       start = true;
     }
   }
-  return [FAQTitle, extractedAnswer, extractedQuestion];
+  return [FAQTitle, extractedFAQ];
 };
 
 export const extractTypesOfCamps = (data) => {
-  let typeName = [];
-  let typeDesc = [];
+  let type = [];
   for (const item of data) {
     if (item.type === "numbered_list_item") {
-      typeName.push(item.content[0].content);
-      typeDesc.push(item.content[1].content);
+      type.push([item.content[0].content, item.content[1].content]);
     }
   }
-  return [typeName, typeDesc];
+  return type;
 };

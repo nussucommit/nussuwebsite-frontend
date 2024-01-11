@@ -1,0 +1,34 @@
+.eventcard {
+  font-family: "Lora", serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.eventname {
+  width: 100%;
+  margin-top: 20px;
+  font-size: 2vw;
+  font-weight: 100;
+  color: #d9a129;
+  text-align: center;
+}
+
+.content {
+  font-size: 1.2vw;
+  font-family: "Lora";
+  margin-left: 4vw;
+  margin-right: 4vw;
+  margin-top: 1.6vw;
+  margin-bottom: 6vh;
+  color: rgb(119, 119, 119);
+  font-weight: 10;
+}
+
+.rectangle {
+  width: 14vw;
+  height: 14vw;
+  background-color: rgb(215, 215, 215);
+  margin-left: 7vw;
+  margin-right: 7vw;
+}
