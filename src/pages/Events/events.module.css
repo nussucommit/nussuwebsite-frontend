@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'Lora';
+    src: url('./Lora-Regular.ttf') format('truetype');
+  };
+
+.Events {
+    font-family: 'Lora';
+    display: flex; 
+    justify-content: center;
+    background-color: #F5F5F5;
+    color: #3E3E3E;
+};
+
+.Events h1 {
+    font-size: 80px;
+    font-weight: 400;
+};
+
+.mainContainer {
+    margin-top: 60px;     /* 20px: top and botton margins; auto: left& right margins */
+    margin-bottom: 140px;
+    margin-left: 90px;
+    margin-right: 90px;
+    display: flex; 
+    justify-content: center;
+    padding: 60px 60px;  /* 60px top and bottom, 60px left and right */
+    background-color: #D9D9D9;
+};
+
+.eventTypeContainer {
+    width: 40%;
+    background-color: #EFEFEF;
+    padding-top: 30px;
+    padding-left: 40px;
+};
+
+
+
+.typeList {
+    margin-top: 73px;
+    width: 100%;
+    background-color: #FFFFFF;
+    padding: 30px 40px;
+    display: flex;        /* Use Flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
+};
+
+.typeList button {
+    margin-bottom: 35px; /* Fixed distance between buttons */
+};
+
+/* Remove margin from the last button */
+.typeList button:last-child {
+    margin-bottom: 0;
+}
+
+
+
+
+
+.typeContainer { /* i feel this is not needed */
+    width: 90%;        /* Set the width to 90% of the outer container */
+    margin: 60px 80px;     /* 20px: top and botton margins; auto: left& right margins */
+    display: flex; 
+    justify-content: center;
+    padding: 60px 60px;  /* 60px top and bottom, 60px left and right */
+
+} 
+
+.test {
+    font-family: 'Lora';
+    font-size: 40px;
+}

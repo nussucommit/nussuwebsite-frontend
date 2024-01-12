@@ -1,4 +1,4 @@
-hi export const content = [[
+export const content = [
     {
         "type": "heading",
         "content": "Student Life"
@@ -187,4 +187,4 @@ hi export const content = [[
             }
         ]
     }
-]]
+]

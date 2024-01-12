@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'Lora';
+    src: url('../Lora-Regular.ttf') format('truetype');
+  }
+  
+
+.typeContainer { /* i feel this is not needed */
+    width: 90%;        /* Set the width to 90% of the outer container */
+    margin: 60px 80px;     /* 20px: top and botton margins; auto: left& right margins */
+    display: flex; 
+    justify-content: center;
+    padding: 60px 60px;  /* 60px top and bottom, 60px left and right */
+
+} 
+
+.eventImage {
+    width: 35%;
+}
+
+.eventText {
+    width: 60%;
+    font-family: 'Lora';
+    font-size: 30px;
+}
+
+.eventText h3 {
+    font-weight: 700;
+}
+
+.eventText p {
+    font-weight: 400;
+}
+
+.rightOrientContainer {
+    display: flex;
+    align-items: center; /* Aligns items vertically in the middle */
+    margin-top: 90px;
+}
+
+.rightOrientContainer .image{
+    order: 1;
+}
+
+.rightOrientContainer .paragraph{
+    order: 2;
+}
+
+.leftOrientContainer {
+    display: flex;
+    align-items: center; /* Aligns items vertically in the middle */
+    margin-top: 90px;
+}
+
+.leftOrientContainer .image{
+    order: 2;
+}
+
+.leftOrientContainer .paragraph{
+    order: 1;
+}
+
