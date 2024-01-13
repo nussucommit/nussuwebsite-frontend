@@ -1,13 +1,23 @@
+import { useFetchData } from "../../../common/useFetchData";
+import { Routes } from "../../../constants/routes";
 import styles from "./ourteam.module.css";
-import Maintenance from "../../Maintenance";
+import CellCard from "./Cell/CellCard";
 import Navbar from "../../Navbar";
 import Footer from "../../Footer";
+import { extractPersonsData } from "./helper";
 
 const OurTeam = () => {
+  const url = Routes.backendRoot + Routes.ourTeam;
+  const [isLoading, content] = useFetchData(url);
+  const personsData = extractPersonsData(content);
   return (
-    <div className={styles.OurTeam}>
+    <div className={styles.container}>
       <Navbar />
-      <Maintenance />
+      <div className={styles.wrapper}>
+      {isLoading 
+        ? <div></div>
+        : personsData.map((item) => <CellCard cellName={item.cellName} image={item.image} members={[...item.members]}/>)}
+      </div>
       <Footer />
     </div>
   );
