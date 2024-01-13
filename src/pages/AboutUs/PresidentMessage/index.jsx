@@ -7,6 +7,19 @@ import { Routes } from "../../../constants/routes";
 const PresidentsMessage = () => {
   const url = Routes.backendRoot + Routes.presidentMessage;
   const [isLoading, content] = useFetchData(url);
+
+  function renderTextItem(textItem, textIndex) {
+    if (textItem.attribute && textItem.attribute.link) {
+      return <a key={textIndex} href={textItem.attribute.link}>{textItem.content}</a>;
+    } else if (textItem.attribute && textItem.attribute.bold) {
+      return <strong key={textIndex}>{textItem.content}</strong>;
+    } else if (textItem.attribute && textItem.attribute.italic) {
+      return <em key={textIndex}>{textItem.content}</em>;
+    } else {
+      return <span key={textIndex}>{textItem.content}</span>;
+    }
+  }
+
   return (
     <div>
       <Navbar />
@@ -26,17 +39,7 @@ const PresidentsMessage = () => {
                   case 'paragraph':
                     return (
                       <p key={index} >
-                        {item.content.map((textItem, textIndex) => {
-                          if (textItem.attribute && textItem.attribute.link) {
-                            return <a key={textIndex} href={textItem.attribute.link}>{textItem.content}</a>;
-                          } else if (textItem.attribute && textItem.attribute.bold) {
-                            return <strong key={textIndex}>{textItem.content}</strong>;
-                          } else if (textItem.attribute && textItem.attribute.italic) {
-                            return <em key={textIndex}>{textItem.content}</em>;
-                          } else {
-                            return <span key={textIndex}>{textItem.content}</span>;
-                          }
-                        })}
+                        {item.content.map((textItem, textIndex) => renderTextItem(textItem, textIndex))}
                       </p>
                     );
                   case 'image':
