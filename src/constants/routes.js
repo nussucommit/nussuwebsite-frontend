@@ -6,7 +6,7 @@ export const Routes = {
   governance: "/aboutus/governance",
   history: "/aboutus/history",
   ourTeam: "/aboutus/ourteam",
-  presidentMessage: "/aboutus/president-message",
+  presidentMessage: "/aboutus/president",
   contact: "/contact",
   events: "/events",
   freshmen: "/freshmen",
