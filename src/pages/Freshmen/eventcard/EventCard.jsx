@@ -16,3 +16,4 @@ const EventCard = (props) => {
 };
 
 export default EventCard;
+

@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./freshmen.module.css";
-import Maintenance from "../Maintenance";
+
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 import { useFetchData } from "../../common/useFetchData";
@@ -41,6 +41,17 @@ const Freshmen = () => {
     );
   }
 
+  function removeInitialCommaSpace(text) {
+    if (text.startsWith(", ")) {
+      return text.substring(2);
+    }
+    return text;
+  }
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <div className={styles.Freshmen}>
       <Navbar />
@@ -48,15 +59,18 @@ const Freshmen = () => {
         <span>{FOP[0]}</span>
       </div>
       <hr className={styles.horizontalLine} />
-      <div className={styles.title}>{formatString(FOP[1])}</div>
+      <div className={styles.title}>{formatString(formatString(FOP[1]))}</div>
       <hr className={styles.horizontalLine} />
       <div className={styles.content}>{FOPDesc} </div>
-      <div className={styles.yellowtitle}>{FOPNUS}</div>
+      <div className={styles.yellowyellowtitle}>{FOPNUS}</div>
       <hr className={styles.horizontalLine} />
       <div className={styles.content}>{FOPTypeDesc} </div>
       <div className={styles.programsection}>
         {CampTypes.map((type) => (
-          <EventCard eventName={type[0]} eventDesc={type[1]}></EventCard>
+          <EventCard
+            eventName={type[0]}
+            eventDesc={removeInitialCommaSpace(type[1])}
+          ></EventCard>
         ))}
       </div>
       <p className={styles.content}>

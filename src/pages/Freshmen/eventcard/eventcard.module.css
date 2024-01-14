@@ -32,3 +32,11 @@
   margin-left: 7vw;
   margin-right: 7vw;
 }
+
+.rectangle {
+  width: 14vw;
+  height: 14vw;
+  background-color: rgb(215, 215, 215);
+  margin-left: 7vw;
+  margin-right: 7vw;
+}

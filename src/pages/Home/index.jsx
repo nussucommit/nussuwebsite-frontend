@@ -86,7 +86,7 @@ const Home = () => {
       </div>
       <div className={styles.socialheader}>
         <span className={styles.odd}>Follow</span>
-        &nbsp;
+        <span className="space"></span>
         <span className={styles.even}>Us</span>
       </div>
       <div className={styles.container}>

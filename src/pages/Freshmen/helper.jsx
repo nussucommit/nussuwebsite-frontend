@@ -1,5 +1,4 @@
 export const extractFOP = (data) => {
-  console.log(data);
   let headingCount = 0;
   let extractedText = []; // treat FOP title and question as one thing since they are unseperatable
   for (const item of data) {
