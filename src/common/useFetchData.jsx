@@ -9,7 +9,7 @@ export const useFetchData = (pathToFetch) => {
     caches
     .has(pathToFetch)
     .then((hasCache) => {
-      if (hasCache == true) {
+      if (hasCache) {
         getCacheData(pathToFetch)
         .then(res => {
           setIsLoading(false)
@@ -39,8 +39,7 @@ export const useFetchData = (pathToFetch) => {
         });
       }
     })
-  }, []);
-
+  }, [pathToFetch]);
   
   return [isLoading, content];
 };
