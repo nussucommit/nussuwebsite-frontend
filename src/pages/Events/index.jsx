@@ -7,21 +7,23 @@ import All from "./eventTypeCards/All.jsx";
 import Freshmen from "./eventTypeCards/Freshmen.jsx";
 import StudentLife from "./eventTypeCards/StudentLife.jsx";
 import Welfare from "./eventTypeCards/Welfare.jsx";
-import Test from "./eventTypeCards/test.jsx"
+
+
+console.log("hi");
+
 
 const Events = () => {
 
-  
   const [currentContent, setCurrentContent] = useState(<All />);
-
   
   return (
-    <div className={styles.Events}>
+    <div className={styles.Outermost}>
       <Navbar />
-      <h1> Events </h1>
-        <div className = {styles.mainContainer}>
+    <h1 className={styles.Heading1}> Events </h1>
+    <div className={styles.Events}>
+      
           <div className = {styles.eventTypeContainer}>
-            <h2>Event Type</h2>
+            <h2 className = {styles.textBox}>Event Type</h2>
             <div className = {styles.typeList}>
               <button onClick={() => setCurrentContent(<All />)}>All</button>
               <button onClick={() => setCurrentContent(<StudentLife />)}>Student Life</button>
@@ -30,15 +32,14 @@ const Events = () => {
             </div>
           </div>
 
-          <div id="content">
+          <div className={styles.eventContents}>
             {currentContent}
           </div>
           
-          <div className ={styles.test}>
-            <Test /> 
-          </div>
+          
           
         </div>   
+        
       <Footer />
     </div>
   );

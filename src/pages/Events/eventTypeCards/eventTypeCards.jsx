@@ -1,14 +1,14 @@
 import React from 'react'
-import styles from './eventTypeCards.css'
+import styles from './eventTypeCards.module.css'
 
-export const eventTypeCard = (currentEventType, key) => { // here item passed into the function will be of one certain event type 
+export const eventTypeCard = (currentEventType, index) => { // here item passed into the function will be of one certain event type 
     
   return (
-  <div className={styles.typeContainer}>
+  <div className={styles.typeContainer} key={index}>
      
-    {(currentEventType.events).map((item) => { // here u create event cards (mapped for each event of the current type)
+    {(currentEventType.events).map((item, index) => { // here u create event cards (mapped for each event of the current type)
         // settled orientationIndex
-        var className = '';
+        let className = '';
         if (item.orientationIndex === 1) {
             className = 'rightOrientContainer';
         } else if (item.orientationIndex === 0){
@@ -16,7 +16,7 @@ export const eventTypeCard = (currentEventType, key) => { // here item passed in
         };
         
         return (
-        <div className = {className}>
+        <div className = {styles[className]} key={index}>
             <img className={styles.eventImage} src={item.imageLink} alt="event-image" />
             <div className = {styles.eventText}>
                 <h3> {item.eventName}</h3>

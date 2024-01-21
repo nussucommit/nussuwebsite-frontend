@@ -1,74 +1,69 @@
 @font-face {
     font-family: 'Lora';
     src: url('./Lora-Regular.ttf') format('truetype');
-  };
+  }
 
-.Events {
+.Outermost {
     font-family: 'Lora';
-    display: flex; 
-    justify-content: center;
     background-color: #F5F5F5;
     color: #3E3E3E;
-};
+}  
 
-.Events h1 {
+.Heading1 {
+    text-align: center;
     font-size: 80px;
     font-weight: 400;
-};
+    color: #3E3E3E;
+}
 
-.mainContainer {
-    margin-top: 60px;     /* 20px: top and botton margins; auto: left& right margins */
-    margin-bottom: 140px;
-    margin-left: 90px;
-    margin-right: 90px;
+.Events {
+    width: 80%;
+    margin: auto;
     display: flex; 
-    justify-content: center;
+    flex-direction: column; /* Align children vertically */
     padding: 60px 60px;  /* 60px top and bottom, 60px left and right */
+    
     background-color: #D9D9D9;
-};
+    color: #3E3E3E; 
+    font-size: 20px;
+}
 
 .eventTypeContainer {
     width: 40%;
     background-color: #EFEFEF;
-    padding-top: 30px;
-    padding-left: 40px;
-};
+    
+}
 
-
+.textBox {
+    font-weight: 400;
+    margin: 10px 20px;
+    font-size: 20px;
+}
 
 .typeList {
-    margin-top: 73px;
+    
     width: 100%;
     background-color: #FFFFFF;
-    padding: 30px 40px;
+    padding-top: 15px;
     display: flex;        /* Use Flexbox for layout */
     flex-direction: column; /* Stack items vertically */
     align-items: flex-start; /* Align items to the left */
-};
+}
 
 .typeList button {
-    margin-bottom: 35px; /* Fixed distance between buttons */
-};
-
-/* Remove margin from the last button */
-.typeList button:last-child {
-    margin-bottom: 0;
+    background: none;
+    border: none;
+    color: inherit; /* Inherits the color from its parent */
+    margin-bottom: 15px; /* Fixed distance between buttons */
+    margin-left: 15px;
+    font-family: inherit; /* Inherits the font from its parent */
+    font-size: inherit; /* Inherits the font size from its parent */
+    cursor: pointer; /* Changes the cursor to signify it's clickable */
+    outline: none; /* Optional: be cautious with accessibility */
+    
 }
 
-
-
-
-
-.typeContainer { /* i feel this is not needed */
-    width: 90%;        /* Set the width to 90% of the outer container */
-    margin: 60px 80px;     /* 20px: top and botton margins; auto: left& right margins */
-    display: flex; 
-    justify-content: center;
-    padding: 60px 60px;  /* 60px top and bottom, 60px left and right */
-
-} 
-
-.test {
-    font-family: 'Lora';
-    font-size: 40px;
+.eventContents {
+    display: flex;
 }
+
