@@ -49,18 +49,20 @@ const Home = () => {
   return (
     <div className={styles.Home}>
       <Navbar />
-      <div className={styles.announcement}>{announcement}</div>
-      <div className={styles.header}>
-        <p className={styles.quote}>
-          We <span style={{ color: "#0177CC", fontWeight: "bold" }}>work</span>{" "}
-          for students!
-        </p>
-        <img className={styles.image} src={logo} alt="NUSSU logo"></img>
-      </div>
-      <div className={styles.banner}>
-        {isLoading
-          ? <div></div>
-          : <SimpleImageSlider
+      {
+        isLoading
+        ? <div className={styles.wrapper}></div>
+        : <>
+          <div className={styles.announcement}>{announcement}</div>
+          <div className={styles.header}>
+            <p className={styles.quote}>
+              We <span style={{ color: "#0177CC", fontWeight: "bold" }}>work</span>{" "}
+              for students!
+            </p>
+            <img className={styles.image} src={logo} alt="NUSSU logo"></img>
+          </div>
+          <div className={styles.banner}>
+            <SimpleImageSlider
               className={styles.slider}
               width={bannerWidth}
               height={bannerHeight}
@@ -68,36 +70,34 @@ const Home = () => {
               showNavs={true}
               autoPlay={true}
             />
-        }
-      </div>
-      <div className={styles.events}>
-        <p className={styles.eventsheader}>EVENTS</p>
-        {isLoading
-          ? <div></div>
-          : <SimpleImageSlider
-              className={styles.slider}
-              width={bannerWidth}
-              height={bannerHeight}
-              images={eventsImages}
-              showNavs={true}
-              autoPlay={true}
-            />
-        }
-      </div>
-      <div className={styles.socialheader}>
-        <span className={styles.odd}>Follow</span>
-        &nbsp;
-        <span className={styles.even}>Us</span>
-      </div>
-      <div className={styles.container}>
-        {windowWidth < embedLimit
-          ? instagramUrls.map((url, index) => (
-              <InstagramEmbed url={url} width="100%"/>
-            ))
-          : instagramUrls.map((url, index) => (
-              <InstagramEmbed url={url} width={350} />
-          ))}
-      </div>
+          </div>
+          <div className={styles.events}>
+            <p className={styles.eventsheader}>EVENTS</p>
+              <SimpleImageSlider
+                className={styles.slider}
+                width={bannerWidth}
+                height={bannerHeight}
+                images={eventsImages}
+                showNavs={true}
+                autoPlay={true}
+              />
+          </div>
+          <div className={styles.socialheader}>
+            <span className={styles.odd}>Follow</span>
+            &nbsp;
+            <span className={styles.even}>Us</span>
+          </div>
+          <div className={styles.container}>
+            {windowWidth < embedLimit
+              ? instagramUrls.map((url, index) => (
+                  <InstagramEmbed url={url} width="100%"/>
+                ))
+              : instagramUrls.map((url, index) => (
+                  <InstagramEmbed url={url} width={350} />
+              ))}
+          </div>
+          </>
+      }
       <Footer />
     </div>
   );
