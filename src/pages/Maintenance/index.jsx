@@ -11,11 +11,11 @@ const Maintenance = () => {
         This page is temporarily unavailable due to a planned upgrade. We
         apologize for any inconvenience.
       </p>
-      <button className = {styles.button}> <a className= {styles.linkColour} href = {"http://localhost:3001/"}> Back to Homepage </a></button>
+      <button className = {styles.button}> <a className= {styles.linkColour} href = {"/"}> Back to Homepage </a></button>
     
     </div>
     </div>
-    // link to the homepage should be fetched from where? 
+ 
   );
 };
 
