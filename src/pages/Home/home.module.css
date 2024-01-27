@@ -1,26 +1,32 @@
 .announcement {
   color: #3e3e3e;
   background-color: rgb(178, 125, 49, 0.5);
-  padding: 0.5vh 0.5vw;
-  font-size: 1.5rem;
+  padding: 0.5vh 4vw;
+  font-size: 1rem;
+  font-family: 'Lora', serif;
+  color: #3E3E3E;
+  -webkit-text-stroke: 1px black;
+  text-shadow: 2px 2px #82828240;
 }
 
 .header {
   display: grid;
-  grid-template-columns: 40% 60%;
   justify-content: center;
   align-items: center;
+  grid-template-columns: 40% 60%;
   background-color: #d9d9d9;
 }
 
 .quote {
-  font-size: 5rem;
-  padding-left: 5vw;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 5.5vw;
+  padding-left: 4.5vw;
+  font-family: 'Lora', serif;
 }
 
 .image {
   width: 40vw;
-  height: 20vh;
   padding-left: 10vw;
 }
 
@@ -28,8 +34,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2.5vh 0;
-  flex-flow: column wrap;
+  padding-top: 10vh;
+  flex-direction: column;
 }
 
 .events {
@@ -37,7 +43,8 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 2.5vh 0;
+  padding: 3vh 0;
+  font-family: 'Inter', sans-serif;
 }
 
 .slider {
@@ -46,7 +53,8 @@
 
 .eventsheader {
   color: #3e3e3e;
-  font-size: 3.5rem;
+  font-size: 4vw;
+  margin-bottom: 20px;
 }
 
 .socialheader {
@@ -64,18 +72,39 @@
 
 .odd {
   color: #3e3e3e !important;
-  font-size: 3.5rem;
 }
 
 .even {
   color: #d9a129 !important;
-  font-size: 3.5rem;
 }
 
 .container {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-direction: row;
-  padding: 5vh;
+  flex-flow: row wrap;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+
+@media screen and (max-width: 850px) {
+
+  .container {
+    flex-direction: column;
+  }
+
+  .eventsheader {
+    font-size: 40px;
+  }
+  .socialheader {
+    font-size: 35px;
+    padding-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .announcement {
+    font-size: 2.6vw;
+  }
+
 }

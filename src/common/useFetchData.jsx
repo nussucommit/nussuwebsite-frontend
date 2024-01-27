@@ -10,7 +10,7 @@ export const useFetchData = (pathToFetch) => {
       .get(pathToFetch, {
         headers: {
           "Content-Type": "Application/json",
-          "Access-Control-Allow-Origin": "*",
+          // "Access-Control-Allow-Origin": "*",
         },
       })
       .then((res) => {
