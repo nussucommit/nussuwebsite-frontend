@@ -1,0 +1,8 @@
+.accordiontitle {
+    font-size: 1.7vw; 
+    font-family: 'Lora', serif;
+    font-weight: 600;
+    width: 100%; 
+    text-align: left;
+    padding: 1.4vh 1.5vw;
+}
