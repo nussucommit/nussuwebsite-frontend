@@ -20,7 +20,7 @@
   bottom: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.5); 
-  z-index: 1;
+  z-index: 0.5;
 }
 
 .titleContainer {
@@ -29,7 +29,7 @@
   align-items: flex-start;
   color: #fff;
   position: relative; 
-  z-index: 2; 
+  z-index: 0.5; 
 }
 
 .title {
@@ -67,7 +67,7 @@
   text-align: right;
   cursor: pointer;
   margin-left: 13.2vw;
-  z-index: 2;
+  z-index: 1;
   margin-bottom: 16vh;
   align-items: flex-end;
 }
@@ -97,7 +97,7 @@
   border-radius: 50%;
   border: 0.2vw solid #000;
   cursor: pointer;
-  z-index: 3;
+  z-index: 1;
   margin-top: 0.8vh;
   margin-bottom: 17.3vh;
 
@@ -110,19 +110,19 @@
   border-radius: 50%;
   border: 2px solid #fff;
   cursor: pointer;
-  z-index: 3;
+  z-index: 1;
   margin-left: -0.4vw;
   margin-bottom: 17.3vh;
   margin-top: 2.2vh;
 }
 
 .verticalLine {
-  height: 100%;
+  height: 99.4%;
   background-color: #fff;
   position: absolute;
   right: 37.6vw;
-  transform: translateX(-22vw);
-  z-index: 2;
+  transform: translateX(-22.2vw);
+  z-index: 0.5;
   border: 0.25vw solid #fff;
 }
   
@@ -165,12 +165,12 @@
   .year {
     font-size: 3.5vh;
     margin-left: -10vw;
-    margin-bottom: 14.5vh;
+    margin-bottom: 15.3vh;
   }
   
   .activeYear {
     font-size: 4.5vh;
-    margin-bottom: 14.5vh;
+    margin-bottom: 16vh;
     width: 31.6vw;
   }
   
@@ -185,13 +185,13 @@
   }
   
   .activeDot {
-    margin-left: -0.7vw;
+    margin-left: -0.6vw;
     margin-bottom: 15vh;
     margin-top: 1.7vh;
   }
   
   .verticalLine {
-    right: 48.2vw;
+    right: 48.4vw;
   }
   .heading {
     font-size: 4.5vh;
@@ -204,17 +204,17 @@
 
 @media (min-width: 847px) and (max-width: 1250px) {
   .title {
-    font-size: 5vh;
+    font-size: 7vh;
   }
   .year {
     font-size: 4.5vh;
     margin-left: 2vw;
-    margin-bottom: 11.8vh;
+    margin-bottom: 14.8vh;
   }
   
   .activeYear {
     font-size: 7vh;
-    margin-bottom: 11.8vh;
+    margin-bottom: 13.9vh;
     width: 25vw;
   }
   
@@ -229,13 +229,13 @@
   }
   
   .activeDot {
-    margin-left: -0.5vw;
+    margin-left: -0.4vw;
     margin-bottom: 14.4vh;
     margin-top: 1.7vh;
   }
   
   .verticalLine {
-    right: 43.5vw;
+    right: 43.6vw;
   }
 
   .heading {
@@ -251,12 +251,12 @@
   .year {
     font-size: 5vh;
     margin-left: 6vw;
-    margin-bottom: 16vh;
+    margin-bottom: 17.1vh;
   }
   
   .activeYear {
     font-size: 8.5vh;
-    margin-bottom: 14.2vh;
+    margin-bottom: 14.8vh;
     width: 24vw;
   }
   
