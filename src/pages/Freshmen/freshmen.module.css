@@ -1,0 +1,62 @@
+
+.header {
+  font-size: 4vw;
+  font-family: "lora";
+  margin-top: 6vh;
+  margin-left: 4vw;
+  position: relative;
+  color: #3e3e3e;
+}
+
+.title {
+  font-size: 2.8vw;
+  font-weight: 10;
+  font-family: "lora";
+  margin-top: 6vh;
+  margin-left: 4vw;
+  position: relative;
+  color: #3e3e3e;
+}
+
+.yellowtitle {
+  font-size: 2.8vw;
+  font-weight: 10;
+  font-family: "lora";
+  margin-top: 6vh;
+  margin-left: 4vw;
+  position: relative;
+  color: #d9a129;
+}
+
+.content {
+  font-size: 1.3vw;
+  font-family: "Lora";
+  margin-left: 4vw;
+  margin-right: 4vw;
+  margin-top: 1.6vw;
+  margin-bottom: 6vh;
+  color: rgb(119, 119, 119);
+  font-weight: 10;
+}
+
+.underlineLink {
+  text-decoration: underline;
+}
+
+.horizontalLine {
+  width: 80%;
+  max-width: 21vw;
+  height: 0.1vh;
+  background-color: #000;
+  margin-top: 0.7vw;
+  margin-bottom: 1vh;
+  margin-left: 4vw;
+}
+
+.programsection {
+  display: flex;
+  flex-direction: row;
+  gap: 5vw;
+  padding: 0 2.5vw;
+  text-align: center;
+}
