@@ -72,4 +72,9 @@
     display: flex;
     flex-direction: row;
   }
+
+  .image {
+    height: 40px;
+    width: auto;
+  }
 }

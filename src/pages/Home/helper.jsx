@@ -62,16 +62,16 @@ export const extractInstagramUrls = (data) => {
   data.forEach((item) => {
     if (item.type === "paragraph") {
       item.content.forEach((contentItem) => {
+        console.log(contentItem);
         if (
           contentItem.type === "text" &&
-          contentItem.attribute &&
-          contentItem.attribute.link
+          contentItem.content.startsWith('https')
         ) {
           instagramUrls.push(contentItem.content);
         }
       });
     }
   });
-
+  console.log(instagramUrls);
   return instagramUrls;
 };

@@ -13,11 +13,9 @@ const OurTeam = () => {
   return (
     <div className={styles.container}>
       <Navbar />
-      <div className={styles.wrapper}>
       {isLoading 
-        ? <div></div>
+        ? <div className={styles.wrapper}></div>
         : personsData.map((item) => <CellCard cellName={item.cellName} image={item.image} members={[...item.members]}/>)}
-      </div>
       <Footer />
     </div>
   );
