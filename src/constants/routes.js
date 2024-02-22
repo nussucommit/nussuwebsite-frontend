@@ -12,4 +12,5 @@ export const Routes = {
   freshmen: "/freshmen",
   ourWork: "/our-work",
   services: "/services",
+  joinus: "/join-us",
 };
