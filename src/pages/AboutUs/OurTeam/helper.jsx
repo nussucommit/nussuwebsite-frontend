@@ -19,7 +19,8 @@ export const extractPersonsData = (data) => {
   const handleParagraph = (item) => {
     const emailData = item.content[0];
     currentPerson.email = emailData.content;
-    currentPerson.emailHyperlink = emailData.attribute.link;
+    // currentPerson.emailHyperlink = emailData.attribute.link;
+    currentPerson.emailHyperlink = emailData.content;
     currentMembers.push({...currentPerson});
     resetCurrentPerson();
   }
