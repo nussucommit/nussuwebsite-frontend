@@ -30,7 +30,6 @@ export const extractBannerImages = (data) => {
       });
     }
   }
-
   return bannerImages;
 };
 
@@ -52,7 +51,6 @@ export const extractEventsImages = (data) => {
       });
     }
   }
-
   return eventsImages;
 };
 
@@ -62,16 +60,15 @@ export const extractInstagramUrls = (data) => {
   data.forEach((item) => {
     if (item.type === "paragraph") {
       item.content.forEach((contentItem) => {
-        console.log(contentItem);
         if (
           contentItem.type === "text" &&
-          contentItem.content.startsWith('https')
+          contentItem.attribute &&
+          contentItem.attribute.link
         ) {
           instagramUrls.push(contentItem.content);
         }
       });
     }
   });
-  console.log(instagramUrls);
   return instagramUrls;
 };
