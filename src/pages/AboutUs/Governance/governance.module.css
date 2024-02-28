@@ -1,0 +1,153 @@
+.container {
+  display: flexbox;
+  position: relative;
+}
+
+.heading {
+  font-size: 5vw; 
+  font-family: 'Lora', serif;
+  color: #3E3E3E;
+  margin-top: 6vh; 
+  margin-left: 4vw; 
+  position: relative;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 1); 
+  color: #3E3E3E;
+}
+
+.horizontalLine {
+  width: 80%; 
+  max-width: 25vw;
+  height: 0.2vh;
+  background-color: #000;
+  margin-top: 1vw; 
+  margin-bottom: 7vh; 
+  margin-left: 4vw;
+}
+.imagecontainer {
+  display: flex;
+  justify-content: center;
+}
+
+.image {
+  width: 92%; 
+  height: auto;
+  margin-bottom: 8vh;
+}
+
+.content {
+  margin-left: 4vw;
+  margin-right: 4vw; 
+  margin-bottom: 12vh;
+}
+
+.councilheader {
+  font-size: 3vw;
+  font-family: 'Lora', serif;
+}
+
+.councilheader::before {
+  content: 'NUSSU';
+  color: #3E3E3E;
+  margin-right: 1vw;
+}
+
+.councilheader::after {
+  content: 'Council';
+  color: #D9A129; 
+}
+
+.horizontalLine2 {
+    width: 80%;
+    max-width: 24vw;   
+    height: 0.2vh;
+    background-color: #000;
+    margin-top: 1vw; 
+    position: absolute;
+}
+
+.councilcontent {
+  font-size: 1.4vw; 
+  font-family: 'Lora', serif;
+  text-align: justify;
+  margin-top: 7vh;
+  margin-bottom: 7vh;
+  line-height: 1.6;
+}
+
+.committeessubheading {
+  font-size: 1.7vw; 
+  font-family: 'Lora', serif;
+  font-weight: 700;
+}
+
+.excocontent,
+.committeescontent {
+  font-size: 1.4vw; 
+  font-family: 'Lora', serif;
+  text-align: justify;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  line-height: 1.5;
+}
+
+.slidercontainer {
+  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.5); 
+  background: radial-gradient(circle, #f3e3c0 45%, #D9A129 110%); 
+  padding-left: 35px; 
+  padding-right: 35px;
+  padding-top: 10px;
+  padding-bottom: 25px;
+  border: 1.5px solid white; 
+  transition: all 0.3s ease; 
+}
+
+.projectssubheading {
+  font-size: 1.7vw; 
+  font-family: 'Lora', serif;
+  text-align: center;
+  font-weight: 700;
+}
+
+.projectscontent {
+  font-size: 1.4vw; 
+  font-family: 'Lora', serif;
+  text-align: center;
+}
+
+.clubs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust the min width as needed */
+  gap: 25px;
+}
+
+.club {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1.5px solid #ccc;
+  padding: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); 
+}
+
+.club img {
+  max-width: 100%;
+  max-height: 37%;
+  object-fit: contain;
+  margin-top: auto; 
+  margin-bottom: auto; 
+}
+
+.clubssubheading {
+  font-size: 1.7vw; 
+  font-family: 'Lora', serif;
+  text-align: center;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.club p {
+  margin: 1vh;
+  font-size: 1.4vw;
+  font-family: 'Lora', serif;
+}
+
