@@ -62,8 +62,7 @@ export const extractInstagramUrls = (data) => {
       item.content.forEach((contentItem) => {
         if (
           contentItem.type === "text" &&
-          contentItem.attribute &&
-          contentItem.attribute.link
+          contentItem.content.startsWith('https')
         ) {
           instagramUrls.push(contentItem.content);
         }
