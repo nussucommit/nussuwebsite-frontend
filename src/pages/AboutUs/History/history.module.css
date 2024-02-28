@@ -1,0 +1,327 @@
+.backgroundImageContainer {
+    position: relative;
+}
+  
+.backgroundImage {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #fff;
+    padding-bottom: 5vh;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5); 
+  z-index: 0.5;
+}
+
+.titleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #fff;
+  position: relative; 
+  z-index: 0.5; 
+}
+
+.title {
+  font-weight: 400;
+  font-family: 'Lora', serif;
+  font-size: 10vh;
+  margin: 6vh 0vw 1vh 2.5vw; 
+  position: relative;
+}
+
+.horizontalLine {
+  width: 95%; 
+  max-width: 50vw;
+  height: 0.2vh;
+  background-color: #fff;
+  margin: 2vh 0vw 10vh 2.8vw;
+}
+
+.maincontainer {
+  display: flex;
+  position: relative;
+}
+
+.timelineContainer {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin-top: 1.3vh;
+}
+
+.year {
+  font-weight: 400;
+  font-family: 'Lora', serif;
+  font-size: 5vh;
+  text-align: right;
+  cursor: pointer;
+  margin-left: 13.2vw;
+  z-index: 1;
+  margin-bottom: 16vh;
+  align-items: flex-end;
+}
+
+.activeYear {
+  font-weight: 400;
+  font-family: 'Lora', serif;
+  font-size: 10vh;
+  color: #F5BF38;
+  cursor: pointer;
+  margin-bottom: 13.5vh;
+  width: 22vw;
+  align-items: flex-end;
+}
+
+.dots {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1.25vw;
+  margin-right: 2.5vw;
+}
+
+.dot {
+  width: 2vw;
+  height: 2vw;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 0.2vw solid #000;
+  cursor: pointer;
+  z-index: 1;
+  margin-top: 0.8vh;
+  margin-bottom: 17.3vh;
+
+}
+
+.activeDot {
+  width: 3vw;
+  height: 3vw;
+  background-color: #F5BF38; 
+  border-radius: 50%;
+  border: 2px solid #fff;
+  cursor: pointer;
+  z-index: 1;
+  margin-left: -0.4vw;
+  margin-bottom: 17.3vh;
+  margin-top: 2.2vh;
+}
+
+.verticalLine {
+  height: 99.4%;
+  background-color: #fff;
+  position: absolute;
+  right: 37.6vw;
+  transform: translateX(-22.2vw);
+  z-index: 0.5;
+  border: 0.25vw solid #fff;
+}
+  
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 7vw;
+    color: #fff;
+    position: relative; 
+    z-index: 2; 
+}
+
+.heading {
+  font-weight: 600;
+  font-family: 'Lora', serif;
+  font-size: 10vh;
+  color: #F5BF38;
+}
+
+.horizontalLine1 {
+  width: 100%; 
+  height: 0.2vh;
+  background-color: #fff;
+  margin: 1.8vh 0vw;
+}
+
+.paragraph {
+  margin-top: 2.5vh;
+  font-weight: 500;
+  font-family: 'Lora', serif;
+  font-size: 3.5vh;
+}
+
+@media (max-width: 847px) {
+  .title {
+    font-size: 4vh;
+  }
+  
+  .year {
+    font-size: 3.5vh;
+    margin-left: -10vw;
+    margin-bottom: 15.3vh;
+  }
+  
+  .activeYear {
+    font-size: 4.5vh;
+    margin-bottom: 16vh;
+    width: 31.6vw;
+  }
+  
+  .dots {
+    margin-left: 2.2vw;
+  }
+  
+  .dot {
+    margin-top: 1.5vh;
+    margin-bottom: 15vh;
+  
+  }
+  
+  .activeDot {
+    margin-left: -0.6vw;
+    margin-bottom: 15vh;
+    margin-top: 1.7vh;
+  }
+  
+  .verticalLine {
+    right: 48.4vw;
+  }
+  .heading {
+    font-size: 4.5vh;
+  }
+  
+  .paragraph {
+    font-size: 2.5vh;
+  }
+}
+
+@media (min-width: 847px) and (max-width: 1250px) {
+  .title {
+    font-size: 7vh;
+  }
+  .year {
+    font-size: 4.5vh;
+    margin-left: 2vw;
+    margin-bottom: 14.8vh;
+  }
+  
+  .activeYear {
+    font-size: 7vh;
+    margin-bottom: 13.9vh;
+    width: 25vw;
+  }
+  
+  .dots {
+    margin-left: 2.2vw;
+  }
+  
+  .dot {
+    margin-top: 1.5vh;
+    margin-bottom: 14.4vh;
+  
+  }
+  
+  .activeDot {
+    margin-left: -0.4vw;
+    margin-bottom: 14.4vh;
+    margin-top: 1.7vh;
+  }
+  
+  .verticalLine {
+    right: 43.6vw;
+  }
+
+  .heading {
+    font-size: 7vh;
+  }
+}
+
+@media (min-width: 1250px) and (max-width: 1366px) {
+  .title {
+    font-size: 8.5vh;
+  }
+  
+  .year {
+    font-size: 5vh;
+    margin-left: 6vw;
+    margin-bottom: 17.1vh;
+  }
+  
+  .activeYear {
+    font-size: 8.5vh;
+    margin-bottom: 14.8vh;
+    width: 24vw;
+  }
+  
+  .dots {
+    margin-left: 2.2vw;
+  }
+  
+  .dot {
+    margin-top: 1.5vh;
+    margin-bottom: 17.3vh;
+  
+  }
+  
+  .activeDot {
+    margin-left: -0.5vw;
+    margin-bottom: 17.3vh;
+    margin-top: 1.8vh;
+  }
+  
+  .verticalLine {
+    right: 40.7vw;
+  }
+  .heading {
+    font-size: 7.5vh;
+  }
+}
+
+@media (min-width: 1366px) and (max-width: 1525px) {
+  .title {
+    font-size: 9vh;
+  }
+
+  .year {
+    font-size: 5vh;
+    margin-left: 6vw;
+  }
+  
+  .activeYear {
+    font-size: 8.5vh;
+    margin-bottom: 14.8vh;
+    width: 25vw;
+  }
+  
+  .dots {
+    margin-left: 2.2vw;
+  }
+  
+  .dot {
+    margin-top: 1.5vh;
+    margin-bottom: 16.6vh;
+  
+  }
+  
+  .activeDot {
+    margin-left: -0.5vw;
+    margin-bottom: 16.6vh;
+    margin-top: 1.5vh;
+  }
+  
+  .verticalLine {
+    right: 39.8vw;
+  }
+  .heading {
+    font-size: 8vh;
+  }
+  
+}
+
