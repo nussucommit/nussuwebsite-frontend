@@ -5,7 +5,7 @@
   flex-direction: column;
   padding-left: 2.5vw;
   padding-right: 2.5vw;
-  font-family: "Lora";
+  font-family: "Lora", serif;
 }
 
 .header {
@@ -94,13 +94,16 @@
 
 hr {
   width: 100%;
-  margin-top: -1vh;
+  margin-top: 1vh;
   margin-bottom: -1vh;
 }
 
 .logo {
   width: 250px;
   height: 120px;
+  margin-left: -25px;
+  margin-top: -20px;
+  margin-bottom: -20px;
 }
 
 .socials {
@@ -112,4 +115,37 @@ hr {
   align-self: center;
   height: 25px;
   width: 100px;
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .aboutUs,
+  .joinUs,
+  .ourWork,
+  .events,
+  .freshmen,
+  .services,
+  .contact {
+    margin-bottom: 3vh;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+  hr {
+    margin-top: 4vh;
+  }
+
+  .links {
+    align-items: left;
+    flex-direction: column;
+    align-items: baseline;
+  }
+
+  .socials {
+    padding-left: 6px;
+  }
 }
