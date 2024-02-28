@@ -30,6 +30,13 @@
   padding-left: 10vw;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 70px;
+}
+
 .banner {
   display: flex;
   justify-content: center;
