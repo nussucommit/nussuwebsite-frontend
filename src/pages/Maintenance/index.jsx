@@ -1,4 +1,5 @@
-import styles from "./maintenance.module.css"; 
+import styles from "./maintenance.module.css";
+import { Routes as ROUTES } from "../../constants/routes.js"
 
 const Maintenance = () => {
    return (
@@ -11,7 +12,7 @@ const Maintenance = () => {
         This page is temporarily unavailable due to a planned upgrade. We
         apologize for any inconvenience.
       </p>
-      <button className = {styles.button}> <a className= {styles.linkColour} href = {"http://localhost:3001/"}> Back to Homepage </a></button>
+      <button className = {styles.button}> <a className= {styles.linkColour} href = {ROUTES.home}> Back to Homepage </a></button>
     
     </div>
     </div>
