@@ -1,0 +1,56 @@
+.excoheader,
+.committeesheader,
+.projectsheader,
+.clubsheader {
+  position: relative;
+  cursor: pointer;
+  font-size: 3vw;
+  font-family: 'Lora', serif;
+  margin-top: 7vh;
+  margin-bottom: 8vh;
+}
+
+.arrow {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.excoheader::before,
+.committeesheader::before,
+.projectsheader::before,
+.clubsheader::before {
+  content: 'NUSSU';
+  color: #3E3E3E;
+  margin-right: 1vw;
+}
+
+.excoheader::after {
+  content: 'EXCO';
+  color: #D9A129; 
+}
+  
+  
+.committeesheader::after {
+  content: 'Committees';
+  color: #D9A129; 
+}
+
+.projectsheader::after {
+  content: 'Projects';
+  color: #D9A129; 
+}
+
+.clubsheader::after {
+  content: 'Constituent Clubs';
+  color: #D9A129; 
+}
+
+.horizontalLine {
+  width: 100%; 
+  max-width: 37vw; 
+  height: 0.2vh;
+  background-color: #000;
+  margin-top: 1vw; 
+  position: absolute;
+}

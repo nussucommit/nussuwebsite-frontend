@@ -1,14 +1,14 @@
-export const extractFOP = (data) => {
+export const extractFOPTitle = (data) => {
   let headingCount = 0;
-  let extractedText = []; // treat FOP title and question as one thing since they are unseperatable
+  let extractedText = [];
   for (const item of data) {
     if (item.type === "heading") {
       const textContent = item.content;
       extractedText.push(textContent);
-      if (headingCount === 1) {
-        break;
-      }
       headingCount++;
+    }
+    if (headingCount == 2) {
+      break;
     }
   }
   return extractedText;
@@ -64,24 +64,24 @@ export const extractNexus = (data) => {
   return extractedText;
 };
 
-export const extractFOPCategory = (data) => {
-  let extractedText = [];
-  let extractedLink = "";
-  for (const item of data) {
-    const content = item.content;
-    if (
-      Array.isArray(content) &&
-      content.length === 3 &&
-      content[1].attribute.link !== undefined
-    ) {
-      for (const item of content) {
-        extractedText.push(item.content);
-      }
-      extractedLink = content[1].attribute.link;
-    }
-  }
-  return [extractedText, extractedLink];
-};
+// export const extractFOPCategory = (data) => {
+//   let extractedText = [];
+//   let extractedLink = "";
+//   for (const item of data) {
+//     const content = item.content;
+//     if (
+//       Array.isArray(content) &&
+//       content.length === 3 &&
+//       content[1].attribute.link !== undefined
+//     ) {
+//       for (const item of content) {
+//         extractedText.push(item.content);
+//       }
+//       extractedLink = content[1].attribute.link;
+//     }
+//   }
+//   return [extractedText, extractedLink];
+// };
 
 export const extractFAQ = (data) => {
   let FAQTitle = "";
@@ -105,7 +105,7 @@ export const extractFAQ = (data) => {
       start = true;
     }
   }
-  return [FAQTitle, extractedFAQ];
+  return [extractedFAQ];
 };
 
 export const extractTypesOfCamps = (data) => {

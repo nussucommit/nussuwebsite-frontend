@@ -1,5 +1,5 @@
 .question {
-  font-size: 1.2vw;
+  font-size: 1.5vw;
   font-family: "Lora";
   margin-left: 4vw;
   margin-right: 4vw;
@@ -10,12 +10,13 @@
 }
 
 .answer {
-  font-size: 1.2vw;
+  font-size: 1.5vw;
   font-family: "Lora";
   margin-left: 4vw;
   margin-right: 4vw;
   margin-top: 1.5vw;
-  margin-bottom: 1.5vh;
+  margin-bottom: 5vh;
   color: rgb(119, 119, 119);
   font-weight: 10;
+
 }

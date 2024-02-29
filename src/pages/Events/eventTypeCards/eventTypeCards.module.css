@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'Lora';
+    src: url('../Lora-Regular.ttf') format('truetype');
+  }
+  
+.typeContainer { /* i feel this is not needed */
+    margin: auto;        /* Set the width to 90% of the outer container */
+    display: flex; 
+    flex-direction: column; /* Align children vertically */
+    align-items: center; /* Align children along the cross axis*/
+    justify-content: center; /* align along the vertical main axis */
+      /* 60px top and bottom, 60px left and right */
+    
+} 
+
+.eventImage {
+    width: 35%;
+}
+
+.eventText {
+    width: 60%;
+    font-family: 'Lora';
+    font-size: 20px;
+
+}
+
+.eventText h3 {
+    font-weight: 700;
+}
+
+.eventText p {
+    font-weight: 400;
+}
+
+.rightOrientContainer {
+    display: flex;
+    margin: auto;
+    flex-direction: row; 
+    align-items: center; /* Aligns items vertically in the middle */
+    margin-top: 90px;
+    
+
+}
+
+.rightOrientContainer .eventImage{
+    padding-right: 25px;
+    order: 1;
+}
+
+.rightOrientContainer .eventText{
+    padding-left: 25px;
+    order: 2;
+}
+
+.leftOrientContainer {
+    display: flex;
+    margin: auto;
+    flex-direction: row; 
+    align-items: center; /* Aligns items vertically in the middle */
+    justify-content: center;
+    margin-top: 90px;
+   
+}
+
+.leftOrientContainer .eventImage{
+    padding-left: 25px;
+    order: 2;
+}
+
+.leftOrientContainer .eventText{
+    padding-right: 25px;
+    order: 1;
+}
+

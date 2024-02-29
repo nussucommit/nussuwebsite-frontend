@@ -25,7 +25,7 @@ export const navs = [
   },
   {
     title: "JOIN US",
-    path: ROUTES.index,
+    path: ROUTES.joinus,
   },
   {
     title: "OUR WORK",

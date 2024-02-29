@@ -12,6 +12,8 @@ import Freshmen from "./Freshmen";
 import Home from "./Home";
 import Ourwork from "./OurWork";
 import Service from "./Service";
+import Maintenance from "./Maintenance/index.jsx";
+import JoinUs from "./JoinUs/index.jsx";
 
 const Pages = () => {
   return (
@@ -29,6 +31,7 @@ const Pages = () => {
         <Route path={ROUTES.freshmen} element={<Freshmen />} />
         <Route path={ROUTES.ourWork} element={<Ourwork />} />
         <Route path={ROUTES.services} element={<Service />} />
+        <Route path={ROUTES.joinus} element={<JoinUs />} />
       </Routes>
     </BrowserRouter>
   );
