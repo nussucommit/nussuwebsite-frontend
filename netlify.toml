@@ -1,0 +1,9 @@
+[[redirects]]
+  from = "/broadcast/*"
+  to = "https://nussuwebsite-broadcast.netlify.app/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
