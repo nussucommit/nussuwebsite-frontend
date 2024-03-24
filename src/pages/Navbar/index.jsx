@@ -35,7 +35,7 @@ const Navbar = () => {
 
   return (
     <nav className={styles.nav}>
-      <a className={styles.home} href={ROUTES.home}> <img className={styles.image} src={logo} alt="NUSSU logo"></img></a>
+      <a className={styles.home} href={ROUTES.index}> <img className={styles.image} src={logo} alt="NUSSU logo"></img></a>
       {windowWidth < 900
         ? <div className={styles.expandable}>
             {menuOpened
