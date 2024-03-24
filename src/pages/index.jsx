@@ -20,7 +20,7 @@ const Pages = () => {
     <BrowserRouter>
       <Routes>
         <Route path={ROUTES.index} element={<Home />} />
-        {/* <Route path="*" element={<Navigate to={ROUTES.index} replace />} /> */}
+        <Route path="*" element={<Navigate to={ROUTES.index} replace />} />
         <Route path={ROUTES.aboutUs} element={<AboutUs />} />
         <Route path={ROUTES.governance} element={<Governance />} />
         <Route path={ROUTES.history} element={<History />} />
