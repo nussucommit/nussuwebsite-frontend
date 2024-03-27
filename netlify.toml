@@ -1,6 +1,6 @@
 [[redirects]]
   from = "/broadcast/*"
-  to = "https://nussuwebsite-broadcast.netlify.app/:splat"
+  to = "https://nussuwebsite-broadcast.pages.dev/:splat"
   status = 200
 
 [[redirects]]
