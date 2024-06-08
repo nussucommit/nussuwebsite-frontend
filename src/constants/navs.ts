@@ -42,6 +42,17 @@ export const navs = [
   {
     title: "SERVICES",
     path: ROUTES.services,
+    subNav: [
+      {
+        title: "NUSSU Students' Fund",
+        path: ROUTES.studentfunds,
+      },
+      {
+        title: "Union Council Funding",
+        path: ROUTES.councilfunding,
+      },
+      
+    ],
   },
   {
     title: "CONTACT",

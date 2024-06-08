@@ -13,6 +13,8 @@ import Home from "./Home";
 import Ourwork from "./OurWork";
 import Service from "./Service";
 import Maintenance from "./Maintenance/index.jsx";
+import StudentFunds from "./Service/StudentFunds";
+import CouncilFunding from "./Service/CouncilFunding";
 import JoinUs from "./JoinUs/index.jsx";
 
 const Pages = () => {
@@ -31,6 +33,8 @@ const Pages = () => {
         <Route path={ROUTES.freshmen} element={<Freshmen />} />
         <Route path={ROUTES.ourWork} element={<Ourwork />} />
         <Route path={ROUTES.services} element={<Service />} />
+        <Route path={ROUTES.studentfunds} element={<StudentFunds />} />
+        <Route path={ROUTES.councilfunding} element= {<CouncilFunding />} />
         <Route path={ROUTES.joinus} element={<JoinUs />} />
       </Routes>
     </BrowserRouter>
