@@ -17,14 +17,15 @@ export const extractAbout = (data) => {
 }
 
 export const extractApplicationPeriod = (data) => {
-    let applicationPeriod = "";
+    let applicationPeriod = [];
     let isApplicationPeriod = false;
     for (const item of data) {
         if (isApplicationPeriod && (item.type === "numbered_list_item" || item.type === "bulleted_list_item" || item.type === "paragraph")) {
+            let currSentence = ""
             for (const subitem of item.content) {
-                applicationPeriod += subitem.content;
+                currSentence += subitem.content;
             }
-            applicationPeriod += "\n";
+            applicationPeriod.push(currSentence);
         } else if (item.type === "heading" && item.content === "APPLICATION PERIOD") {
             isApplicationPeriod = true;
         } else if (isApplicationPeriod) {
