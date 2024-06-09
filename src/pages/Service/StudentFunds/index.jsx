@@ -31,7 +31,10 @@ const StudentFunds = () => {
     const applicationPeriod = extractApplicationPeriod(content);
     const resultsRelease = extractResultsRelease(content);
     const applicationLink = extractApplicationLink(content);
-    const termsAndConditions = "https://prod-files-secure.s3.us-west-2.amazonaws.com/58192aff-311a-42ce-88ef-f7a68a1798f3/e89acd53-73c8-4c6c-9e4f-7eca5eb47157/NUSSU-Students--Funds-Terms---Conditions.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240609%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240609T141121Z&X-Amz-Expires=3600&X-Amz-Signature=ccf797c03682bb7f9a16c5e88853309e63aa507b7dd45399cd766f9c3ac8ec21&X-Amz-SignedHeaders=host&x-id=GetObject";
+    const termsAndConditions = {
+        url: "https://prod-files-secure.s3.us-west-2.amazonaws.com/58192aff-311a-42ce-88ef-f7a68a1798f3/e89acd53-73c8-4c6c-9e4f-7eca5eb47157/NUSSU-Students--Funds-Terms---Conditions.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240609%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240609T141121Z&X-Amz-Expires=3600&X-Amz-Signature=ccf797c03682bb7f9a16c5e88853309e63aa507b7dd45399cd766f9c3ac8ec21&X-Amz-SignedHeaders=host&x-id=GetObject",
+        description: "NUSSU Students' Funds Terms and Conditions"
+    };
 
     return (
         <div>
@@ -88,9 +91,10 @@ const StudentFunds = () => {
                     <h2 className={styles.subheader}>Terms and Conditions</h2>
                     <hr className={styles.horizontalLine} />
                     {/* <div>{termsAndConditions}</div> */}
-                    <a href={termsAndConditions} target="_blank" rel="noopener noreferrer" style={styles.link}>
+                    <a href={termsAndConditions.url} target="_blank" rel="noopener noreferrer" style={styles.link}>
                         <CIcon icon={freeSet.cilFile} height="10vh" width="7.5vw" />
                     </a>
+                    <div className={styles.text}>{termsAndConditions.description}</div>
                 </div>
             </div>
         
