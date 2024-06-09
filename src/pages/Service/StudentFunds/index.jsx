@@ -33,6 +33,7 @@ const StudentFunds = () => {
     return (
         <div>
             <Navbar />
+            <h1>NUSSU Students' Fund</h1>
             <div className={styles.image}>
                 <img src={image} />
             </div>

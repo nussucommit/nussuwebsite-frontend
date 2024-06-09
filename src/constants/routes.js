@@ -13,6 +13,6 @@ export const Routes = {
   ourWork: "/our-work",
   services: "/",
   studentfunds: "/services/studentfunds",
-  councilfunding: "services/councilfunding",
+  councilfunding: "/services/councilfunding",
   joinus: "/join-us",
 };
