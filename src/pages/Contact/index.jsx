@@ -26,34 +26,35 @@ const Contact = () => {
   return (
     <div className={styles.Contact}>
       <Navbar />
-      <h1>Contact Us</h1>
-      <div className={styles.Map} style={{ width: '100%', height: '400px' }}>
-        <iframe 
-          src={embedLink} 
-          width="600" 
-          height="450" 
-          allowfullscreen="" 
-          loading="lazy" 
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
+      <div className={styles.headingContainer}>
+        <h1 className={styles.heading}>Contact Us</h1>
+        <div className={styles.map}>
+          <iframe 
+            src={embedLink}
+            className={styles.mapImage}
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
       </div>
-
+      
       <div className={styles.contactInfo}>
-        <h2>Contact Information</h2>
-        <h3>Contact Information</h3>
-        <p>{contactInfo}</p>
-        <h3>Operating Hours</h3>
-        <p>{operatingHours}</p>
-        <h3>General</h3>
-        <p>{general}</p>
-        <h3>Collaboration</h3>
-        <p>{collaboration}</p>
-        <h3>Publicity Requests</h3>
-        <p>{publicityRequests}</p>
+        <h2 className={styles.subheader}>Contact Information</h2>
+        <h3 className={styles.contactheader}>Contact Information</h3>
+        <p className={styles.text}>{contactInfo}</p>
+        <h3 className={styles.contactheader}>Operating Hours</h3>
+        <p className={styles.text}>{operatingHours}</p>
+        <h3 className={styles.contactheader}>General</h3>
+        <p className={styles.text}>{general}</p>
+        <h3 className={styles.contactheader}>Collaboration</h3>
+        <p className={styles.text}>{collaboration}</p>
+        <h3 className={styles.contactheader}>Publicity Requests</h3>
+        <p className={styles.text}>{publicityRequests}</p>
       </div>
       
       <div className={styles.email}>
-        <h2>Email Form</h2>
+        <h2 className={styles.emailheader}>Email Form</h2>
         <ContactForm />
       </div>
       <Footer />

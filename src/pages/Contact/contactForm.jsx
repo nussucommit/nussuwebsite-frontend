@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
-import styles from "./contact.module.css";
+import { useState } from 'react';
+import styles from './contact.module.css';
+import { Routes } from '../../constants/routes';
 
 export const ContactForm = () => {
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
+    subject: '',
     question: '',
   });
 
@@ -13,44 +15,79 @@ export const ContactForm = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Add form submission logic here
+    const url = Routes.form;
+    const body = {
+      sheet1: {
+        fullName: formData.fullName,
+        email: formData.email,
+        subject: formData.subject,
+        question: formData.question,
+      }
+    };
+
+    try {
+      const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(body)
+      });
+
+      if (!response.ok) {
+        throw new Error(`Error: ${response.statusText}`);
+      }
+
+      const json = await response.json();
+      console.log('Form submitted successfully:', json.sheet1);
+    } catch (error) {
+      console.error('Error submitting form:', error);
+    }
   };
 
   return (
-    <form onSubmit={handleSubmit} style={styles.form}>
-      <div style={styles.formGroup}>
-        <label style={styles.label}>Full Name</label>
+    <form onSubmit={handleSubmit} className={styles.form}>
+      <div className={styles.formGroup}>
+        <label className={styles.label}>Full Name</label>
         <input
           type="text"
           name="fullName"
           value={formData.fullName}
           onChange={handleChange}
-          style={styles.input}
+          className={styles.input}
         />
       </div>
-      <div style={styles.formGroup}>
-        <label style={styles.label}>Email Address</label>
+      <div className={styles.formGroup}>
+        <label className={styles.label}>Email Address</label>
         <input
-          type="email"
           name="email"
           value={formData.email}
           onChange={handleChange}
-          style={styles.input}
+          className={styles.input}
         />
       </div>
-      <div style={styles.formGroup}>
-        <label style={styles.label}>Question</label>
+      <div className={styles.formGroup}>
+        <label className={styles.label}>Subject</label>
+        <input
+          type="text"
+          name="subject"
+          value={formData.subject}
+          onChange={handleChange}
+          className={styles.input}
+        />
+      </div>
+      <div className={styles.formGroup}>
+        <label className={styles.label}>Question</label>
         <textarea
           name="question"
           value={formData.question}
           onChange={handleChange}
-          style={{ ...styles.input, ...styles.textarea }}
+          className={styles.textarea}
         />
       </div>
-      <button type="submit" style={styles.button}>Submit</button>
+      <button type="submit" className={styles.button}>Submit</button>
     </form>
   );
 };
