@@ -14,5 +14,9 @@ export const Routes = {
   services: "/",
   studentfunds: "/services/studentfunds",
   councilfunding: "/services/councilfunding",
+  resiliencefund: "/services/resiliencefund",
+  logisticrental: "/services/logisticrental",
+  zoomlicense: "/services/zoomlicense",
+  publicitymanagement: "/services/publicitymanagement",
   joinus: "/join-us",
 };

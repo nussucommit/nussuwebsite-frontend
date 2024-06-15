@@ -51,7 +51,22 @@ export const navs = [
         title: "Union Council Funding",
         path: ROUTES.councilfunding,
       },
-      
+      {
+        title: "NUS Staff Club Students' Resilience Fund",
+        path: ROUTES.resiliencefund,
+      },
+      {
+        title: "Logistics Rental",
+        path: ROUTES.logisticrental,
+      },
+      {
+        title: "Requests for Zoom License",
+        path: ROUTES.zoomlicense,
+      },
+      {
+        title: "Union Publicity Management",
+        path: ROUTES.publicitymanagement,
+      },
     ],
   },
   {
