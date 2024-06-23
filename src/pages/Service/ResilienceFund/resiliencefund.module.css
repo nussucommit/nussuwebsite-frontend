@@ -1,0 +1,55 @@
+.header {
+    font-size: 5vw;
+    font-family: 'Lora', serif;
+    margin-top: 6vh; 
+    margin-left: 4vw; 
+    position: relative;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 1); 
+    color: #3E3E3E;
+}
+
+.subheader {
+    font-size: 2.7vw; 
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    color: #D9A129; 
+}
+
+.content {
+    margin: 0vh 5vw;
+}
+
+.text {
+    font-size: 1.4vw; 
+    font-family: 'Lora', serif;
+    text-align: justify;
+    line-height: 1.5;
+    margin-bottom: 7.5vh;
+}
+
+.imageContainer {
+    display: flex;
+    margin: 5vh 15vw;
+    margin-bottom: 10vh;
+}
+
+.image {
+    object-fit: contain;
+}
+
+.horizontalLine {
+    max-width: 50vw;
+    height: 0.2vh;
+    background-color: #000;
+    margin-top: 1vw; 
+    margin-bottom: 1.5vh; 
+    margin-left: 0vw;
+}
+
+.textheader {
+    font-size: 1.7vw; 
+    font-family: 'Lora', serif;
+    text-align: justify;
+    line-height: 1.5;
+    color: #3E3E3E;
+}

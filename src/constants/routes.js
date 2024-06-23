@@ -1,5 +1,5 @@
 export const Routes = {
-  backendRoot: "https://api.nussu.org.sg",
+  backendRoot: "http://127.0.0.1:8000",
   index: "/",
   home: "/home",
   aboutUs: "/aboutus/aboutus",
@@ -11,6 +11,12 @@ export const Routes = {
   events: "/events",
   freshmen: "/freshmen",
   ourWork: "/our-work",
-  services: "/services",
+  services: "/",
+  studentfunds: "/services/studentfunds",
+  councilfunding: "/services/councilfunding",
+  resiliencefund: "/services/resiliencefund",
+  logisticrental: "/services/logisticrental",
+  zoomlicense: "/services/zoomlicense",
+  publicitymanagement: "/services/publicitymanagement",
   joinus: "/join-us",
 };
