@@ -1,5 +1,5 @@
 export const Routes = {
-  backendRoot: "http://127.0.0.1:8000",
+  backendRoot: "https://api.nussu.org.sg",
   index: "/",
   home: "/home",
   aboutUs: "/aboutus/aboutus",
