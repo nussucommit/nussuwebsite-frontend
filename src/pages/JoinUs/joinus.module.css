@@ -26,3 +26,8 @@
 .content {
     margin: 0vh 5vw;
 }
+
+.bold {
+    font-weight: 2000 !important;
+    text-decoration: underline;
+}
