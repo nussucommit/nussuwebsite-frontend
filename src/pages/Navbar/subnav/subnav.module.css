@@ -25,7 +25,7 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  padding: 1.5vh 2vw;
+  padding: 1.5vh 20px;
 }
 
 .navitem {
@@ -35,4 +35,20 @@
 
 .navitem:hover {
   color: #b27d31;
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    position: relative;
+    display: inline-block;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    padding-left: 3px;
+  }
+
+  .dropdowncontent {
+    display: fixed;
+    margin-left: -220px;
+    margin-top: -27px;
+  }
 }

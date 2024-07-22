@@ -41,12 +41,6 @@ const Footer = () => {
           <a className={styles.section} href={ROUTES.ourWork}>
             Our Work
           </a>
-          <a className={styles.subsection} href="">
-            Policies
-          </a>
-          <a className={styles.subsection} href="">
-            Archives
-          </a>
         </div>
         <div className={styles.events}>
           <a className={styles.section} href={ROUTES.events}>
@@ -56,12 +50,6 @@ const Footer = () => {
         <div className={styles.freshmen}>
           <a className={styles.section} href={ROUTES.freshmen}>
             Freshmen
-          </a>
-          <a className={styles.subsection} href="">
-            Events
-          </a>
-          <a className={styles.subsection} href="">
-            Resources
           </a>
         </div>
         <div className={styles.services}>

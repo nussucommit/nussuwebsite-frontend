@@ -25,7 +25,7 @@ export const navs = [
   },
   {
     title: "JOIN US",
-    path: ROUTES.index,
+    path: ROUTES.joinus,
   },
   {
     title: "OUR WORK",
@@ -42,6 +42,32 @@ export const navs = [
   {
     title: "SERVICES",
     path: ROUTES.services,
+    subNav: [
+      {
+        title: "NUSSU Students' Fund",
+        path: ROUTES.studentfunds,
+      },
+      {
+        title: "Union Council Funding",
+        path: ROUTES.councilfunding,
+      },
+      {
+        title: "NUS Staff Club Students' Resilience Fund",
+        path: ROUTES.resiliencefund,
+      },
+      {
+        title: "Logistics Rental",
+        path: ROUTES.logisticrental,
+      },
+      {
+        title: "Requests for Zoom License",
+        path: ROUTES.zoomlicense,
+      },
+      {
+        title: "Union Publicity Management",
+        path: ROUTES.publicitymanagement,
+      },
+    ],
   },
   {
     title: "CONTACT",

@@ -9,13 +9,12 @@ export const extractAnnouncement = (data) => {
       }
     }
   }
-
+  console.log(extractedText);
   return extractedText;
 };
 
 export const extractBannerImages = (data) => {
   const bannerImages = [];
-
   let foundBannerHeading = false;
 
   for (const item of data) {
@@ -31,7 +30,6 @@ export const extractBannerImages = (data) => {
       });
     }
   }
-
   return bannerImages;
 };
 
@@ -53,7 +51,6 @@ export const extractEventsImages = (data) => {
       });
     }
   }
-
   return eventsImages;
 };
 
@@ -65,14 +62,12 @@ export const extractInstagramUrls = (data) => {
       item.content.forEach((contentItem) => {
         if (
           contentItem.type === "text" &&
-          contentItem.attribute &&
-          contentItem.attribute.link
+          contentItem.content.startsWith('https')
         ) {
           instagramUrls.push(contentItem.content);
         }
       });
     }
   });
-
   return instagramUrls;
 };
