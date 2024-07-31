@@ -64,7 +64,7 @@ const PublicityManagement = () => {
       <div className={styles.content}>
         <h1 className={styles.header}>Union Publicity Management</h1>
 
-        <div className={styles.announcements}>
+        <div className={styles.subcontent}>
           <h2 className={styles.subheader}>Announcements</h2>
           <hr className={styles.horizontalLine} />
           {
@@ -72,7 +72,7 @@ const PublicityManagement = () => {
           }
         </div>
 
-        <div className={styles.process}>
+        <div className={styles.subcontent}>
           <h2 className={styles.subheader}>Process for Publicity Requests</h2>
           <hr className={styles.horizontalLine} />
           {
@@ -80,7 +80,7 @@ const PublicityManagement = () => {
           }
         </div>
 
-        <div className={styles.notes}>
+        <div className={styles.subcontent}>
           <h2 className={styles.subheader}>Notes</h2>
           <ul>
             {
@@ -89,14 +89,14 @@ const PublicityManagement = () => {
           </ul>
         </div>
 
-        <div className={styles.eligibility}>
+        <div className={styles.subcontent}>
           <h2 className={styles.subheader}>Eligibility</h2>
           {
             convert(eligibility)
           }
         </div>
 
-        <div className={styles.general}>
+        <div className={styles.subcontent}>
           <h2 className={styles.subheader}>General Guidelines on Publicity Materials</h2>
           <ol>
             {
@@ -105,49 +105,49 @@ const PublicityManagement = () => {
           </ol>
         </div>
 
-        <div className={styles.general}>
+        <div className={styles.subcontent}>
           <h2 className={styles.subheader}>Publicity Materials Required</h2>
           {
             convert(publicityMaterials)
           }
         </div>
 
-        <div className={styles.general}>
+        <div className={styles.subcontent}>
           <h2 className={styles.subheader}>{'Electronic Digital Mailer (EDM)'}</h2>
           {
             convert(materialEDM)
           }
         </div>
 
-        <div className={styles.general}>
+        <div className={styles.subcontent}>
           <h2 className={styles.subheader}>{'Instagram'}</h2>
           {
             convert(materialInstagram)
           }
         </div>
 
-        <div className={styles.general}>
+        <div className={styles.subcontent}>
           <h2 className={styles.subheader}>{'Telegram Channel'}</h2>
           {
             convert(materialTelegram)
           }
         </div>
 
-        <div className={styles.general}>
+        <div className={styles.subcontent}>
           <h2 className={styles.subheader}>{'Noticeboards'}</h2>
           {
             convert(materialNoticeboard)
           }
         </div>
 
-        <div className={styles.general}>
+        <div className={styles.subcontent}>
           <h2 className={styles.subheader}>{'Fair Use'}</h2>
           {
             convert(fairUse)
           }
         </div>
 
-        <div className={styles.general}>
+        <div className={styles.subcontent}>
           <h2 className={styles.subheader}>{'Electronic Digital Mailer (EDM)'}</h2>
           {
             convert(fairUseEDM)
