@@ -8,10 +8,6 @@ import Freshmen from "./eventTypeCards/Freshmen.jsx";
 import StudentLife from "./eventTypeCards/StudentLife.jsx";
 import Welfare from "./eventTypeCards/Welfare.jsx";
 
-
-console.log("hi");
-
-
 const Events = () => {
 
   const [currentContent, setCurrentContent] = useState(<All />);
