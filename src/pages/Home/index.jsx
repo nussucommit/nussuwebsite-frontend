@@ -88,13 +88,8 @@ const Home = () => {
             <span className={styles.even}>Us</span>
           </div>
           <div className={styles.container}>
-            {windowWidth < embedLimit
-              ? instagramUrls.map((url, index) => (
-                  <InstagramEmbed url={url} width="100%"/>
-                ))
-              : instagramUrls.map((url, index) => (
-                  <InstagramEmbed url={url} width={350} />
-              ))}
+            {instagramUrls.map((url, index) => (
+                  <InstagramEmbed url={url} width={350} />))}
           </div>
           </>
       }
