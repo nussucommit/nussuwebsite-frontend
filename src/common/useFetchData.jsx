@@ -24,6 +24,7 @@ export const useFetchData = (pathToFetch) => {
         .get(pathToFetch, {
           headers: {
             "Content-Type": "Application/json",
+            "Cache-Control": "max-age=3600",
             // "Access-Control-Allow-Origin": "*",
           },
         })
