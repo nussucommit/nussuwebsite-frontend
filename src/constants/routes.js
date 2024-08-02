@@ -16,7 +16,7 @@ export const Routes = {
   councilfunding: "/services/councilfunding",
   resiliencefund: "/services/resiliencefund",
   logisticrental: "/services/logisticrental",
-  zoomlicense: "/services/zoomlicense",
+  zoomlicense: "/services/zoomLicense",
   publicitymanagement: "/services/publicitymanagement",
   joinus: "/joinus",
 };
