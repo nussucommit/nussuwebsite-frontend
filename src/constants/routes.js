@@ -19,4 +19,5 @@ export const Routes = {
   zoomlicense: "/services/zoomLicense",
   publicitymanagement: "/services/publicitymanagement",
   joinus: "/joinus",
+  form: "/contact/submit_feedback",
 };
