@@ -1,7 +1,7 @@
 export const Routes = {
   backendRoot: "https://api.nussu.org.sg",
   index: "/",
-  home: "/home",
+  home: "",
   aboutUs: "/aboutus/aboutus",
   governance: "/aboutus/governance",
   history: "/aboutus/history",
