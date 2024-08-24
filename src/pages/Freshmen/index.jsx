@@ -14,6 +14,7 @@ import {
   extractTypesOfCamps,
   extractFOPNUS,
   extractFOPTypeDesc,
+  extractNexus,
 } from "./helper";
 import FaqCard from "./faqcard/FaqCard";
 
@@ -22,8 +23,7 @@ const Freshmen = () => {
   const [isLoading, content] = useFetchData(url);
   const FOPPageHeader = extractFOPTitle(content);
   const FOPDesc = extractFOPDesc(content);
-  // const Nexus = extractNexus(content);
-  // const FOPCategory = extractFOPCategory(content);
+  const Nexus = extractNexus(content);
   const FAQ = extractFAQ(content)[0];
   const CampTypes = extractTypesOfCamps(content);
   const FOPNUS = extractFOPNUS(content);
@@ -43,6 +43,9 @@ const Freshmen = () => {
       <div className={styles.title}>{FOPPageHeader[1]}</div>
       <hr className={styles.horizontalLine} />
       <div className={styles.content}>{FOPDesc} </div>
+      <div className={styles.yellowtitle}>{Nexus[0]}</div>
+      <hr className={styles.horizontalLine} />
+      <div className={styles.content}>{Nexus[1]} </div>
       <div className={styles.yellowtitle}>FOPs in NUS</div>
       <hr className={styles.horizontalLine} />
       <div className={styles.content}>{FOPTypeDesc} </div>

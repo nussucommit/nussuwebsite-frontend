@@ -28,10 +28,6 @@ export const navs = [
     path: ROUTES.joinus,
   },
   {
-    title: "OUR WORK",
-    path: ROUTES.ourWork,
-  },
-  {
     title: "EVENTS",
     path: ROUTES.events,
   },

@@ -8,7 +8,7 @@ const EventCard = (props) => {
 
   return (
     <div className={styles.eventcard}>
-      <div className={styles.rectangle}></div>
+      {/* <div className={styles.rectangle}></div> */}
       <div className={styles.eventname}>{eventName}</div>
       <div className={styles.content}>{eventDesc}</div>
     </div>

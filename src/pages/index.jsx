@@ -10,7 +10,6 @@ import Contact from "./Contact";
 import Events from "./Events";
 import Freshmen from "./Freshmen";
 import Home from "./Home";
-import Ourwork from "./OurWork";
 import Service from "./Service";
 import Maintenance from "./Maintenance/index.jsx";
 import StudentFunds from "./Service/StudentFunds";
@@ -18,6 +17,7 @@ import CouncilFunding from "./Service/CouncilFunding";
 import JoinUs from "./JoinUs/index.jsx";
 import ResilienceFund from "./Service/ResilienceFund/index.jsx";
 import ZoomLicense from "./Service/ZoomLicense/index.jsx";
+import LogisticsRental from "./Service/LogisticsRental/index.jsx";
 import PublicityManagement from "./Service/PublicityManagement/index.jsx";
 
 const Pages = () => {
@@ -34,12 +34,12 @@ const Pages = () => {
         <Route path={ROUTES.contact} element={<Contact />} />
         <Route path={ROUTES.events} element={<Events />} />
         <Route path={ROUTES.freshmen} element={<Freshmen />} />
-        <Route path={ROUTES.ourWork} element={<Ourwork />} />
         <Route path={ROUTES.services} element={<Service />} />
         <Route path={ROUTES.studentfunds} element={<StudentFunds />} />
         <Route path={ROUTES.councilfunding} element= {<CouncilFunding />} />
         <Route path={ROUTES.resiliencefund} element= {<ResilienceFund />} />
         <Route path={ROUTES.zoomlicense} element= {<ZoomLicense />} />
+        <Route path={ROUTES.logisticrental} element= {<LogisticsRental />} />
         <Route path={ROUTES.publicitymanagement} element= {<PublicityManagement />} />
         <Route path={ROUTES.joinus} element={<JoinUs />} />
       </Routes>

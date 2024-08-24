@@ -1,5 +1,5 @@
 export const Routes = {
-  backendRoot: "https://api.nussu.org.sg",
+  backendRoot: process.env.REACT_APP_BACKEND_ROOT,
   index: "/",
   home: "/home",
   aboutUs: "/aboutus/aboutus",
@@ -16,7 +16,7 @@ export const Routes = {
   councilfunding: "/services/councilfunding",
   resiliencefund: "/services/resiliencefund",
   logisticrental: "/services/logisticrental",
-  zoomlicense: "/services/zoomlicense",
+  zoomlicense: "/services/zoomLicense",
   publicitymanagement: "/services/publicitymanagement",
-  joinus: "/join-us",
+  joinus: "/joinus",
 };

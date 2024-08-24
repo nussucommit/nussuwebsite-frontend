@@ -5,6 +5,7 @@ import CellCard from "./Cell/CellCard";
 import Navbar from "../../Navbar";
 import Footer from "../../Footer";
 import { extractPersonsData } from "./helper";
+import Maintenance from "../../Maintenance";
 
 const OurTeam = () => {
   const url = Routes.backendRoot + Routes.ourTeam;
@@ -13,9 +14,10 @@ const OurTeam = () => {
   return (
     <div className={styles.container}>
       <Navbar />
-      {isLoading 
+      {/* {isLoading 
         ? <div className={styles.wrapper}></div>
-        : personsData.map((item) => <CellCard cellName={item.cellName} image={item.image} members={[...item.members]}/>)}
+        : personsData.map((item) => <CellCard cellName={item.cellName} image={item.image} members={[...item.members]}/>)} */}
+      <Maintenance />
       <Footer />
     </div>
   );
