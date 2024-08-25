@@ -1,6 +1,6 @@
-import React from 'react'
-import PersonCard from './Person/PersonCard'
-import styles from './cellcard.module.css'
+import React from "react";
+import PersonCard from "./Person/PersonCard";
+import styles from "./cellcard.module.css";
 
 const CellCard = (props) => {
   const cellName = props.cellName;
@@ -9,18 +9,33 @@ const CellCard = (props) => {
   const members = props.members;
 
   return (
-  <div className={styles.cellcard}>
-    <div className={styles.cellname}>
-      <div>
-        {cellNameArray.map(word =>
-            <span className={cellNameArray.indexOf(word)%2 == 0 ? styles.odd : styles.even}>{word}&nbsp;</span>)}
+    <div className={styles.cellcard}>
+      <div className={styles.cellname}>
+        <div>
+          {cellNameArray.map((word) => (
+            <span
+              key={word}
+              className={
+                cellNameArray.indexOf(word) % 2 === 0 ? styles.odd : styles.even
+              }
+            >
+              {word}&nbsp;
+            </span>
+          ))}
+        </div>
+        <div className={styles.divider}></div>
       </div>
-      <div className={styles.divider}></div>
+      <img className={styles.cellimage} src={image} alt="cell" />
+      {members.map((person) => (
+        <PersonCard
+          name={person.name}
+          position={person.position}
+          email={person.email}
+          emailHyperlink={person.emailHyperlink}
+        />
+      ))}
     </div>
-    <img className={styles.cellimage} src={image} alt="cell-image" />
-    {members.map((person) => <PersonCard name={person.name} position={person.position} email={person.email} emailHyperlink={person.emailHyperlink}/>)}
-  </div>
-  )
-}
+  );
+};
 
-export default CellCard
+export default CellCard;
