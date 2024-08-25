@@ -14,6 +14,17 @@ const extractData = (data, match, isNotDupe = true) => {
       }
       currParagraph.content = currSentence;
       extracted.push(currParagraph);
+    } else if (isMatch && (isNotDupe || isFairUse) && item.type === "quote") {
+      let currParagraph = {
+        type: "quote",
+        content: ""
+      }
+      let currSentence = "";
+      for (const subitem of item.content) {
+        currSentence += subitem.content;
+      }
+      currParagraph.content = currSentence;
+      extracted.push(currParagraph);
     } else if (isMatch && (isNotDupe || isFairUse) && item.type === "image") {
       let currImage = {
         type: "image",
@@ -100,3 +111,52 @@ export const extractFairUse = (data) => {
 export const extractFairUseEDM = (data) => {
   return extractData(data, "Electronic Digital Mailer (EDM)", false)
 }
+
+export const extractFairUseTelegram = (data) => {
+  return extractData(data, "Telegram Channel", false)
+}
+
+export const extractFairUseInstagram = (data) => {
+  return extractData(data, "Instagram Story or Post Sharing")
+}
+
+export const extractPDP = (data) => {
+  return extractData(data, "Personal Data Protection")
+}
+
+export const extractApproval = (data) => {
+  return extractData(data, "Approval of Publicity Materials")
+}
+
+export const extractNUSSUOrganisations = (data) => {
+  return extractData(data, "NUSSU Constituent Clubs, Associate Bodies and other NUS-registered Organisations")
+}
+
+export const extractCouncilProjects = (data) => {
+  return extractData(data, "Council, EXCO, Committees or Projects")
+}
+
+export const extractDesignConsiderations = (data) => {
+  return extractData(data, "Design Considerations")
+}
+
+export const extractUnionBrandingRequirements = (data) => {
+  return extractData(data, "Union branding requirements")
+}
+
+export const extractDesign= (data) => {
+  return extractData(data, "Design")
+}
+
+export const extractContent = (data) => {
+  return extractData(data, "Content")
+}
+
+export const extractLinks= (data) => {
+  return extractData(data, "Links")
+}
+
+export const extractDirectives = (data) => {
+  return extractData(data, "Directives")
+}
+

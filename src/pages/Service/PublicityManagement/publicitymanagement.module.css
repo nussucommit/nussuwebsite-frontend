@@ -10,10 +10,10 @@
 }
 
 .subheader {
-  font-size: 24px; 
   font-family: 'Lora', serif;
   font-weight: 700;
   color: #D9A129; 
+  text-align: left;
 }
 
 .content {
@@ -24,15 +24,20 @@
 }
 
 .subcontent {
-  max-width: 600px;
+  width: 600px;
 }
 
-.text, .bullet {
+.text, .bullet, .quote {
   font-size: 16px; 
   font-family: 'Lora', serif;
   text-align: justify;
   line-height: 1.5;
   margin-bottom: 1.5vh;
+}
+
+.quote {
+  padding-left: 10px;
+  border-left: 2px solid #444444;
 }
 
 .horizontalLine {
