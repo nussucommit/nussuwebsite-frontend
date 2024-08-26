@@ -68,6 +68,13 @@ const OurTeam = () => {
     <div className={styles.container}>
       <Navbar />
 
+      {/* Header */}
+      <div className={styles["header-row"]}>
+        <div className={styles["header"]}>
+          <h1>Our Team</h1>
+        </div>
+      </div>
+
       {/* Cell selection */}
       <div className={styles["cell-selection"]}>
         <div className={styles["cells"]}>
