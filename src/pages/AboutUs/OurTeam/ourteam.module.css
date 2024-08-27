@@ -1,10 +1,75 @@
+@font-face {
+  font-family: "Lora";
+  src: url("./Lora-Regular.ttf") format("truetype");
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 70px;
+  /* margin-bottom: 70px; */
 }
 
 .container {
-  background: #F5F5F5;
+  background: #f5f5f5;
+}
+
+.header-row {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 20px 0;
+  font-family: "Lora", sans-serif;
+  font-size: 2rem;
+}
+
+.header {
+  display: flex;
+  width: 60%;
+  justify-content: left;
+}
+
+.cell-selection {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.cells {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 60%;
+  gap: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: none;
+}
+
+.cell {
+  flex-grow: 1;
+  font-size: 1.5rem;
+  font-family: "Lora";
+  background-color: white;
+  border: none;
+  padding: 15px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-align: center;
+}
+
+.selected {
+  background-color: #d9a129;
+  color: white;
+}
+
+.unselected {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.unselected:hover {
+  background-color: #ccc;
 }
