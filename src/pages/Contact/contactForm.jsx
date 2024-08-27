@@ -31,6 +31,8 @@ export const ContactForm = () => {
       }
     };
 
+    setShowSuccessNotification(true);
+    
     try {
       const response = await fetch(url, {
         method: 'POST',
@@ -46,7 +48,7 @@ export const ContactForm = () => {
         setShowErrorNotification(true);
         setShowSuccessNotification(false); // hide success notification if error occurs
       } else {
-        setShowSuccessNotification(true);
+
         setShowErrorNotification(false);
 
         // Hide the success notification after 2 seconds
