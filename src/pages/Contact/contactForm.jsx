@@ -10,14 +10,18 @@ export const ContactForm = () => {
     question: '',
   });
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
+
+ // Add this line to define the showNotification state
+ const [showNotification, setShowNotification] = useState(false);
+
+ const handleChange = (e) => {
+   const { name, value } = e.target;
+   setFormData({ ...formData, [name]: value });
+ };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const url = Routes.form;
+    const url = Routes.backendRoot + Routes.form;
     const body = {
       sheet1: {
         fullName: formData.fullName,
@@ -37,16 +41,36 @@ export const ContactForm = () => {
       });
 
       if (!response.ok) {
-        throw new Error(`Error: ${response.statusText}`);
+        console.error('Failed to submit form:', response);
+      } else {
+        const json = await response.json();
+        console.log('Form submitted successfully:', json.sheet1);
       }
 
-      const json = await response.json();
-      console.log('Form submitted successfully:', json.sheet1);
+
+      // Show the notification banner
+      setShowNotification(true);
+
+      // Hide the banner after 2 seconds
+      setTimeout(() => {
+        setShowNotification(false);
+      }, 2000);
+
+      // Clear the form
+      setFormData({
+        fullName: '',
+        email: '',
+        subject: '',
+        question: '',
+      });
+
     } catch (error) {
       console.error('Error submitting form:', error);
     }
   };
 
+
+  // Add this block of code to render the notification banner
   return (
     <form onSubmit={handleSubmit} className={styles.form}>
       <div className={styles.formGroup}>

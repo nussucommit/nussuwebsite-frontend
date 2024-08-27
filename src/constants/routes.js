@@ -1,7 +1,7 @@
 export const Routes = {
   backendRoot: process.env.REACT_APP_BACKEND_ROOT,
   index: "/",
-  home: "",
+  home: "/",
   aboutUs: "/aboutus/aboutus",
   governance: "/aboutus/governance",
   history: "/aboutus/history",
@@ -19,5 +19,5 @@ export const Routes = {
   zoomlicense: "/services/zoomLicense",
   publicitymanagement: "/services/publicitymanagement",
   joinus: "/joinus",
-  form: "/contact/submit_feedback",
+  form: "/contact/submit_feedback/",
 };
