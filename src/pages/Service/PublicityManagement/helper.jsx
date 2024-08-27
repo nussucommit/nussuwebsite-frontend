@@ -31,6 +31,12 @@ const extractData = (data, match, isNotDupe = true) => {
         content: item.content
       }
       extracted.push(currImage);
+    } else if (isMatch && (isNotDupe || isFairUse) && item.type === "file") {
+      let currFile = {
+        type: "file",
+        content: item.url
+      }
+      extracted.push(currFile);
     } else if (isMatch && (isNotDupe || isFairUse) && item.type === "bulleted_list_item") {
       let currBullet = {
         type: "bullet",

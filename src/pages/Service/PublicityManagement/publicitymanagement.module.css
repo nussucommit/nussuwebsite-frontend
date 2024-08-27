@@ -53,6 +53,10 @@
   object-fit: contain;
 }
 
+.icon {
+  margin: 0 20px;
+}
+
 /* @media screen and (max-width: 1000px) {
 
   .container {

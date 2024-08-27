@@ -11,6 +11,7 @@ import {
   extractCouncilProjects,
   extractDesign,
   extractDesignConsiderations,
+  extractDirectives,
   extractElligibility,
   extractFairUse,
   extractFairUseEDM,
@@ -65,6 +66,7 @@ const PublicityManagement = () => {
   const design = extractDesign(contentTwo);
   const content = extractContent(contentTwo);
   const links = extractLinks(contentTwo);
+  const directives = extractDirectives(contentTwo);
 
   const convert = (data) => {
     return data.map((item) => {
@@ -76,9 +78,22 @@ const PublicityManagement = () => {
         return (
           <p className={styles.quote}>{item.content}</p>
         )
-      }else if (item.type === 'image') {
+      } else if (item.type === 'image') {
         return (
           <img src={item.content} className={styles.image} />
+        )
+      } else if (item.type === 'file') {
+        return (
+          <div className={styles.icon}>
+            <a
+              href={item.content}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <CIcon icon={freeSet.cilFile} height="10vh" width="7.5vw" />
+            </a>
+            <div className={styles.text}>{`Directives`}</div>
+          </div>
         )
       } else if (item.type === 'bullet' || item.type === 'number') {
         return (
@@ -258,6 +273,13 @@ const PublicityManagement = () => {
           <h3 className={styles.subheader}>{'Links'}</h3>
           {
             convert(links)
+          }
+        </div>
+
+        <div className={styles.subcontent}>
+          <h3 className={styles.subheader}>{'Directives'}</h3>
+          {
+            convert(directives)
           }
         </div>
 
