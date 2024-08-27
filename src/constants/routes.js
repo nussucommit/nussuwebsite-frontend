@@ -18,5 +18,7 @@ export const Routes = {
   logisticrental: "/services/logisticrental",
   zoomlicense: "/services/zoomLicense",
   publicitymanagement: "/services/publicitymanagement",
+  publicitymanagementone: "/services/publicitymanagement/page-1",
+  publicitymanagementtwo: "/services/publicitymanagement/page-2",
   joinus: "/joinus",
 };
