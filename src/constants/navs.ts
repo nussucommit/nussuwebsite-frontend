@@ -37,7 +37,7 @@ export const navs = [
   },
   {
     title: "SERVICES",
-    path: ROUTES.services,
+    path: "",
     subNav: [
       {
         title: "NUSSU Students' Fund",
@@ -50,10 +50,6 @@ export const navs = [
       {
         title: "NUS Staff Club Students' Resilience Fund",
         path: ROUTES.resiliencefund,
-      },
-      {
-        title: "Logistics Rental",
-        path: ROUTES.logisticrental,
       },
       {
         title: "Requests for Zoom License",

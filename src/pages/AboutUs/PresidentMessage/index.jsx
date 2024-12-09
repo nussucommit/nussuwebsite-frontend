@@ -26,7 +26,7 @@ const PresidentsMessage = () => {
       <div className = {styles.textGeneral}>
         <div className = {styles.container}>
     
-          <h1 className = {styles.textTitle}> <br></br> President's<span className={styles.orangeText}>Message</span></h1>
+          <h1 className = {styles.textTitle}> <br></br> President's <span className={styles.orangeText}>Message</span></h1>
           <svg width="395" height="1" viewBox="0 0 395 1" fill="none" xmlns="http://www.w3.org/2000/svg">
             <line y1="0.5" x2="395" y2="0.5" stroke="black"/>
           </svg>

@@ -56,8 +56,7 @@ const Home = () => {
           <div className={styles.announcement}>{announcement}</div>
           <div className={styles.header}>
             <p className={styles.quote}>
-              We <span style={{ color: "#0177CC", fontWeight: "bold" }}>work</span>{" "}
-              for students!
+              For Students, By Students
             </p>
             <img className={styles.image} src={logo} alt="NUSSU logo"></img>
           </div>

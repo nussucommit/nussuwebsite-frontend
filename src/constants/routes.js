@@ -1,7 +1,7 @@
 export const Routes = {
   backendRoot: process.env.REACT_APP_BACKEND_ROOT,
   index: "/",
-  home: "/home",
+  home: "/",
   aboutUs: "/aboutus/aboutus",
   governance: "/aboutus/governance",
   history: "/aboutus/history",
@@ -10,13 +10,10 @@ export const Routes = {
   contact: "/contact",
   events: "/events",
   freshmen: "/freshmen",
-  ourWork: "/our-work",
-  services: "/",
   studentfunds: "/services/studentfunds",
   councilfunding: "/services/councilfunding",
   resiliencefund: "/services/resiliencefund",
-  logisticrental: "/services/logisticrental",
   zoomlicense: "/services/zoomLicense",
-  publicitymanagement: "/services/publicitymanagement",
+  publicitymanagement: "https://forms.office.com/Pages/ResponsePage.aspx?id=Xu-lWwkxd06Fvc_rDTR-gnQf1jdn-oNNuI1ZYSNB3CpUOE40TERGUDhMTzM4NlFaWVVFNk8zTkxBMi4u",
   joinus: "/joinus",
 };
