@@ -174,7 +174,9 @@ export const extractNussuConstituentClubsDetails = (data) => {
       foundSection = true;
     } else if (foundSection && (item.type === 'paragraph' || item.type === 'heading' || item.type === 'image')) {
       if (item.type === 'heading') {
-        if (currentSection) {
+        if (item.content === 'Union Constitution and Regulations' || item.content === 'NUSSU Constituent Clubs') {
+          break;
+        } else if (currentSection) {
           currentSection = { heading: item.content, paragraphs: [], image: null };
           details.sections.push(currentSection);
         } else {
@@ -195,4 +197,28 @@ export const extractNussuConstituentClubsDetails = (data) => {
 
   return details;
 };
+
+
+
+export const extractUnionConstitutionandRegulation = (data) => {
+  let details = {heading: "", docs: []}
+  let isUnionConstitutionandRegulation = false;
+  for (const item of data) {
+    if (isUnionConstitutionandRegulation) {
+      if (item.type === 'heading') {
+        details.heading = item.content
+      } else if (item.type === "file") {
+        const doc = {
+          url: item.url,
+          name: item.name
+        }
+        console.log(doc)
+        details.docs.push(doc)
+      }
+    } else if (item.type === "heading" && item.content === "Union Constitution and Regulations") {
+      isUnionConstitutionandRegulation = true;
+    }
+  }
+  return details;
+}
 

@@ -5,14 +5,15 @@ import styles from "./studentfunds.module.css"
 import { useFetchData } from "../../../common/useFetchData";
 import { Routes } from "../../../constants/routes";
 import {
-  extractImage,
-  extractAbout,
-  extractLateApplications,
-  extractEligibility,
-  extractApplicationPeriod,
-  extractResultsRelease,
-  extractApplicationLink,
-  extractTermsAndConditions,
+    extractImage,
+    extractAbout,
+    extractLateApplications,
+    extractEligibility,
+    extractAssistanceProvided,
+    extractApplicationPeriod,
+    extractResultsRelease,
+    extractApplicationLink,
+    extractTermsAndConditions,
 } from './helper';
 
 import CIcon from '@coreui/icons-react';
@@ -27,7 +28,7 @@ const StudentFunds = () => {
     const about = extractAbout(content);
     const lateApplications = extractLateApplications(content);
     const eligibility = extractEligibility(content);
-    // const assistanceProviced = extractAssistanceProvided(content);
+    const assistanceProvided = extractAssistanceProvided(content);
     const applicationPeriod = extractApplicationPeriod(content);
     const resultsRelease = extractResultsRelease(content);
     const applicationLink = extractApplicationLink(content);
@@ -41,7 +42,7 @@ const StudentFunds = () => {
             <Navbar />
             <h1 className={styles.header}>NUSSU Students' Fund</h1>
             <div className={styles.imageContainer}>
-                <img src={image} className={styles.image}/>
+                <img src={image} className={styles.image} />
             </div>
 
             <div className={styles.content}>
@@ -61,20 +62,22 @@ const StudentFunds = () => {
                     <h2 className={styles.subheader}>Eligibility</h2>
                     <hr className={styles.horizontalLine} />
 
-                    
+
                     <p className={styles.text}>{eligibility[0]}</p>
                     <ul className={styles.text}>
                         {eligibility.slice(1).map((item, index) => (
                             <li key={index}>{item}</li>
                         ))}
                     </ul>
-                    
+
                 </div>
 
-                {/* <div className={styles.assistance}>
+                <div className={styles.assistance}>
                     <h2 className={styles.subheader}>Assistance Provided</h2>
-                    <p className={styles.text}> {assistanceProviced}</p>
-                </div> */}
+                    <div className={styles.imageContainer}>
+                        <img src={assistanceProvided} className={styles.image} />
+                    </div>
+                </div>
 
                 <div className={styles.application}>
                     <h2 className={styles.subheader}>Application</h2>
@@ -97,10 +100,10 @@ const StudentFunds = () => {
                     <div className={styles.text}>{termsAndConditions.description}</div>
                 </div>
             </div>
-        
+
             <Footer />
         </div>
-   )
+    )
 }
 
 export default StudentFunds;
