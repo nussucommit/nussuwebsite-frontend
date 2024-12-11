@@ -19,7 +19,7 @@ export const extractAbout = (data) => {
             }
             break;
         }
-        if (item.type === "heading" && item.content === "ABOUT NUS Staff Club Students’ Resilience Fund") {
+        if (item.type === "heading" && item.content === "About NUS Staff Club Students’ Resilience Fund") {
             isAbout = true;
         }
     }
@@ -27,17 +27,17 @@ export const extractAbout = (data) => {
 }
 
 export const extractEligibility = (data) => {
-    let eligibility = "";
+    let eligibility = [];
     let isEligibility = false;
     for (const item of data) {
         if (isEligibility && (item.type === "paragraph" || item.type === "bulleted_list_item")) {
             for (const subitem of item.content) {
-                eligibility += subitem.content;
+                eligibility.push(subitem.content);
             }
-            break;
-        }
-        if (item.type === "heading" && item.content === "ELIGIBILITY") {
+        } else if (item.type === "heading" && item.content === "Eligibility") {
             isEligibility = true;
+        } else if (isEligibility) {
+            break;
         }
     }
     return eligibility;
@@ -50,7 +50,7 @@ export const extractAssistanceProvided = (data) => {
         if (isAssistanceProvided) {
             assistanceProvided = item.content;
             break;
-        } else if (item.type === "heading" && item.content === "ASSISTANCE PROVIDED") {
+        } else if (item.type === "heading" && item.content === "Assistance Provided") {
             isAssistanceProvided = true;
         }
     }
@@ -58,14 +58,16 @@ export const extractAssistanceProvided = (data) => {
 }
 
 export const extractApplicationProcedure = (data) => {
-    let applicationProcedure = "";
+    let applicationProcedure = [];
     let isProcedure = false;
     for (const item of data) {
         if (isProcedure && item.type === "numbered_list_item") {
+            let content = "";
             for (const subitem of item.content) {
-                applicationProcedure += subitem.content;
+                content += subitem.content;
             }
-        } else if (item.type === "heading" && item.content === "APPLICATION PROCEDURE") {
+            applicationProcedure.push(content);
+        } else if (item.type === "heading" && item.content === "Application Procedure") {
             isProcedure = true;
         } else if (isProcedure) {
             break;
@@ -84,7 +86,7 @@ export const extractApplicationPeriod = (data) => {
             }
             break;
         }
-        if (item.type === "heading" && item.content === "APPLICATION PERIOD") {
+        if (item.type === "heading" && item.content === "Application Period") {
             isPeriod = true;
         }
     }
@@ -101,9 +103,23 @@ export const extractApplicationLink = (data) => {
             }
             break;
         }
-        if (item.type === "heading" && item.content === "APPLICATION LINK") {
+        if (item.type === "heading" && item.content === "Application Link") {
             isLink = true;
         }
     }
     return applicationLink;
+}
+
+export const extractTermsAndConditions = (data) => {
+    let termsAndConditions = {type: "", url: "", name: ""};
+    let isTermsAndConditions = false;
+    for (const item of data) {
+        if (isTermsAndConditions) {
+            termsAndConditions = item;
+            break;
+        } else if (item.type === "heading" && item.content === "Terms and Conditions") {
+            isTermsAndConditions = true;
+        }
+    }
+    return termsAndConditions;
 }

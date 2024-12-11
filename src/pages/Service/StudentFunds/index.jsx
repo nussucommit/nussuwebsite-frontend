@@ -71,6 +71,7 @@ const StudentFunds = () => {
 
                 <div className={styles.assistance}>
                     <h2 className={styles.subheader}>Assistance Provided</h2>
+                    <hr className={styles.horizontalLine} />
                     <div className={styles.imageContainer}>
                         <img src={assistanceProvided} className={styles.image} />
                     </div>
