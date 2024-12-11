@@ -9,8 +9,6 @@ const StudentLife = () => {
     
     const fullData = extractEventsData(content);
     const studentLifeEvents = fullData.filter(item => item.typeName === "Student Life");
-
-    console.log(fullData);
     
     return (
         <div>

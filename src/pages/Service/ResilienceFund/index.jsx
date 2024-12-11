@@ -11,6 +11,7 @@ import {
     extractApplicationProcedure,
     extractApplicationPeriod,
     extractApplicationLink,
+    extractAssistanceProvided
 } from './helper';
 
 const ResilienceFund = () => {
@@ -19,10 +20,10 @@ const ResilienceFund = () => {
     const image = extractImage(content);
     const about = extractAbout(content);
     const eligibility = extractEligibility(content);
+    const assistanceProvided = extractAssistanceProvided(content);
     const applicationProcedure = extractApplicationProcedure(content);
     const applicationPeriod = extractApplicationPeriod(content);
     const applicationLink = extractApplicationLink(content);
-    console.log(eligibility)
 
     return (
         <div>
@@ -43,6 +44,13 @@ const ResilienceFund = () => {
                     <h2 className={styles.subheader}>Eligibility</h2>
                     <hr className={styles.horizontalLine} />
                     <p className={styles.text}>{eligibility}</p>
+                </div>
+
+                <div className={styles.assistance}>
+                    <h2 className={styles.subheader}>Assistance Provided</h2>
+                    <div className={styles.imageContainer}>
+                        <img src={assistanceProvided} className={styles.image} />
+                    </div>
                 </div>
 
                 <div className={styles.application}>

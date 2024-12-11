@@ -3,6 +3,7 @@ export const extractImage = (data) => {
     for (const item of data) {
         if (item.type === "image") {
             image = item.content;
+            break;
         }
     }
     return image;
@@ -40,6 +41,20 @@ export const extractEligibility = (data) => {
         }
     }
     return eligibility;
+}
+
+export const extractAssistanceProvided = (data) => {
+    let assistanceProvided = "";
+    let isAssistanceProvided = false;
+    for (const item of data) {
+        if (isAssistanceProvided) {
+            assistanceProvided = item.content;
+            break;
+        } else if (item.type === "heading" && item.content === "ASSISTANCE PROVIDED") {
+            isAssistanceProvided = true;
+        }
+    }
+    return assistanceProvided;
 }
 
 export const extractApplicationProcedure = (data) => {

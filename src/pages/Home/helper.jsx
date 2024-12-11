@@ -9,7 +9,6 @@ export const extractAnnouncement = (data) => {
       }
     }
   }
-  console.log(extractedText);
   return extractedText;
 };
 

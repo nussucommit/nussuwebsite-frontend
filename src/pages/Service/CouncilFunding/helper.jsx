@@ -36,7 +36,17 @@ export const extractApplicationPeriod = (data) => {
 }
 
 export const extractFundingAmount = (data) => {
-
+    let fundingAmount = "";
+    let isFundingAmount = false;
+    for (const item of data) {
+        if (isFundingAmount) {
+            fundingAmount = item.content;
+            break;
+        } else if (item.type === "heading" && item.content === "FUNDING AMOUNT") {
+            isFundingAmount = true;
+        }
+    }
+    return fundingAmount;
 }
 
 export const extractApplicationLink = (data) => {
@@ -60,7 +70,7 @@ export const extractDocuments = (data) => {
     let isDocuments = false;
     for (const item of data) {
         if (isDocuments && item.type === "file") {
-            documents.push(item.url)
+            documents.push(item)
         } else if (item.type === "heading" && item.content === "Documents") {
             isDocuments = true;
         }
