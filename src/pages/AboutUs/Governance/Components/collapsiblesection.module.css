@@ -1,7 +1,8 @@
 .excoheader,
 .committeesheader,
 .projectsheader,
-.clubsheader {
+.clubsheader,
+.docsheader {
   position: relative;
   cursor: pointer;
   font-size: 3vw;
@@ -19,7 +20,8 @@
 .excoheader::before,
 .committeesheader::before,
 .projectsheader::before,
-.clubsheader::before {
+.clubsheader::before,
+.docsheader::before{
   content: 'NUSSU';
   color: #3E3E3E;
   margin-right: 1vw;
@@ -29,8 +31,7 @@
   content: 'EXCO';
   color: #D9A129; 
 }
-  
-  
+
 .committeesheader::after {
   content: 'Committees';
   color: #D9A129; 

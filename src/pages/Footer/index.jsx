@@ -3,6 +3,7 @@ import commitlogo from "../../assets/commit_logo.png";
 import { SocialIcon } from "react-social-icons";
 import nussulogo from "../../assets/NUSSU-logo.svg";
 import { Routes as ROUTES } from "../../constants/routes";
+import { Routes } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -24,22 +25,8 @@ const Footer = () => {
           </a>
         </div>
         <div className={styles.joinUs}>
-          <a className={styles.section} href="">
+          <a className={styles.section} href={ROUTES.joinus}>
             Join Us
-          </a>
-          <a className={styles.subsection} href="">
-            EXCO
-          </a>
-          <a className={styles.subsection} href="">
-            Committees
-          </a>
-          <a className={styles.subsection} href="">
-            Sub-Comms
-          </a>
-        </div>
-        <div className={styles.ourWork}>
-          <a className={styles.section} href={ROUTES.ourWork}>
-            Our Work
           </a>
         </div>
         <div className={styles.events}>
@@ -53,43 +40,28 @@ const Footer = () => {
           </a>
         </div>
         <div className={styles.services}>
-          <a className={styles.section} href={ROUTES.services}>
+          <div className={styles.section}>
             Services
-          </a>
-          <a className={styles.subsection} href="">
-            Financial Aid
-          </a>
-          <a className={styles.subsection} href="">
+          </div>
+          <a className={styles.subsection} href={ROUTES.councilfunding}>
             Council Funding
           </a>
-          <a className={styles.subsection} href="">
-            Logistics Rental
-          </a>
-          <a className={styles.subsection} href="">
-            Venue Booking
-          </a>
-          <a className={styles.subsection} href="">
-            Van Booking
-          </a>
-          <a className={styles.subsection} href="">
+          <a className={styles.subsection} href={ROUTES.publicitymanagement}>
             Publicity
           </a>
-          <a className={styles.subsection} href="">
-            Licensing
+          <a className={styles.subsection} href={ROUTES.zoomlicense}>
+            Zoom Licensing
+          </a>
+          <a className={styles.subsection} href={ROUTES.resiliencefund}>
+            Resilience Fund
+          </a>
+          <a className={styles.subsection} href={ROUTES.studentfunds}>
+            Student's Fund
           </a>
         </div>
         <div className={styles.contact}>
           <a className={styles.section} href={ROUTES.contact}>
             Contact
-          </a>
-          <a className={styles.subsection} href="">
-            Map & Venue
-          </a>
-          <a className={styles.subsection} href="">
-            Info Details
-          </a>
-          <a className={styles.subsection} href="">
-            Inquiries
           </a>
         </div>
       </div>
