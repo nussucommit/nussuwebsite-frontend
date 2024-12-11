@@ -212,7 +212,6 @@ export const extractUnionConstitutionandRegulation = (data) => {
           url: item.url,
           name: item.name
         }
-        console.log(doc)
         details.docs.push(doc)
       }
     } else if (item.type === "heading" && item.content === "Union Constitution and Regulations") {

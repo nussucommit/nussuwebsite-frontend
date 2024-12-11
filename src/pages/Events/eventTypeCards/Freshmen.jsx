@@ -9,9 +9,6 @@ const Freshmen = () => {
     const fullData = extractEventsData(content);
     const freshmenEvents = fullData.filter(item => item.typeName === "Freshmen Orientation Programme");
 
-    console.log('Input Data:', content);
-    console.log('Processed Data:', fullData);
-
     return (
         <div>
             {freshmenEvents.map((event, index) => 

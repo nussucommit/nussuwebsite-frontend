@@ -27,7 +27,6 @@ const ZoomLicense = () => {
     const applicationForm = extractApplicationForm(content);
     const template = extractTemplate(content);
     const contact = extractContact(content);
-    console.log(contact);
 
     return (
         <div>

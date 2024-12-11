@@ -38,6 +38,12 @@
 
 .table {
     display: flex;
+    justify-content: space-evenly;
+}
+
+.tableCol {
+    display: flex;
+    flex-direction: column;
 }
 
 .applicationPeriod {

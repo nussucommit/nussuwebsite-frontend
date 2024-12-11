@@ -129,11 +129,11 @@ export const extractApplicationLink = (data) => {
 }
 
 export const extractTermsAndConditions = (data) => {
-    let termsAndConditions = "";
+    let termsAndConditions = {type: "", url: "", name: ""};
     let isTermsAndConditions = false;
     for (const item of data) {
         if (isTermsAndConditions) {
-            termsAndConditions = item.url;
+            termsAndConditions = item;
             break;
         } else if (item.type === "heading" && item.content === "Terms and Conditions") {
             isTermsAndConditions = true;

@@ -30,7 +30,6 @@ const JoinUs = () => {
   const committeeApplication = extractCommitteeApplication(content);
   const nussuProjectsApplication = extractNussuProjectsApplication(content);
 
-  console.log(candidate);
   return (
     <div className={styles.JoinUs}>
       <Navbar />
