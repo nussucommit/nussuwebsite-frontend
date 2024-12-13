@@ -54,13 +54,6 @@ const ZoomLicense = () => {
                 </div>
 
                 <div className={styles.box}>
-                    <h2 className={styles.boxheader}>Terms and Conditions</h2>
-                    <a href={termsAndConditions} target="_blank" rel="noopener noreferrer" style={styles.link}>
-                        <CIcon icon={freeSet.cilFile} height="10vh" width="7.5vw" />
-                    </a>
-                </div>
-
-                <div className={styles.box}>
                     <h2 className={styles.boxheader}>Application Form</h2>
                     <u className={styles.text}>{applicationForm}</u>
                 </div>
