@@ -31,9 +31,7 @@ export const extractEligibility = (data) => {
     let isEligibility = false;
     for (const item of data) {
         if (isEligibility && (item.type === "paragraph" || item.type === "bulleted_list_item")) {
-            for (const subitem of item.content) {
-                eligibility.push(subitem.content);
-            }
+            eligibility.push(item)
         } else if (item.type === "heading" && item.content === "Eligibility") {
             isEligibility = true;
         } else if (isEligibility) {
