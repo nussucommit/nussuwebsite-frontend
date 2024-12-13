@@ -16,4 +16,5 @@ export const Routes = {
   zoomlicense: "/services/zoomLicense",
   publicitymanagement: "https://forms.office.com/Pages/ResponsePage.aspx?id=Xu-lWwkxd06Fvc_rDTR-gnQf1jdn-oNNuI1ZYSNB3CpUOE40TERGUDhMTzM4NlFaWVVFNk8zTkxBMi4u",
   joinus: "/joinus",
+  form: "/contact/submit_feedback/",
 };
