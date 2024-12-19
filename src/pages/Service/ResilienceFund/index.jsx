@@ -17,6 +17,26 @@ import {
 import CIcon from '@coreui/icons-react';
 import { freeSet } from '@coreui/icons'
 
+const bulletListParse = (item) => {
+    console.log(item)
+    let children = null
+    let text = ""
+    item.content && item.content.map(subitem => {
+        text += subitem.content
+        if (subitem.children) {
+            children = subitem.children
+        }
+    })
+    return (<li>
+        {text}
+        {children && (
+            <ul className={styles.text}>
+                {children.map(subcontent => bulletListParse(subcontent))}
+            </ul>
+        )}
+    </li>)
+}
+
 const ResilienceFund = () => {
     const url = Routes.backendRoot + Routes.resiliencefund;
     const [isLoading, content] = useFetchData(url);
@@ -48,9 +68,19 @@ const ResilienceFund = () => {
                     <h2 className={styles.subheader}>Eligibility</h2>
                     <hr className={styles.horizontalLine} />
                     <ul className={styles.text}>
-                        {eligibility.map((item, index) => (
-                            <li key={index}>{item}</li>
-                        ))}
+                        {eligibility.map(item => {
+                            if (item.type === "paragraph") {
+                                let text = "";
+                                item.content.map(subitem => {
+                                    text += subitem.content
+                                })
+                                return (
+                                    <p className={styles.text}>{text}</p>
+                                )
+                            } else if (item.type === "bulleted_list_item") {
+                                return bulletListParse(item)
+                            }
+                        })}
                     </ul>
                 </div>
 
