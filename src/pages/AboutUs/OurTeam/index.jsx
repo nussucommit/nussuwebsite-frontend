@@ -13,36 +13,36 @@ const cells = [
     title: "Presidential & Internal Cell",
     url: "/presidential",
   },
-  {
-    cellName: "Rel",
-    title: "Relations Cell",
-    url: "/relations",
-  },
-  {
-    cellName: "Sec",
-    title: "Secretariat Cell",
-    url: "/secretariat",
-  },
-  {
-    cellName: "Fin",
-    title: "Finance Cell",
-    url: "/finance",
-  },
-  {
-    cellName: "Comms",
-    title: "Communications Cell",
-    url: "/communications",
-  },
-  {
-    cellName: "Life",
-    title: "Student Life Cell",
-    url: "/studentlife",
-  },
-  {
-    cellName: "Welfare",
-    title: "Student Welfare Cell",
-    url: "/studentwelfare",
-  },
+  // {
+  //   cellName: "Rel",
+  //   title: "Relations Cell",
+  //   url: "/relations",
+  // },
+  // {
+  //   cellName: "Sec",
+  //   title: "Secretariat Cell",
+  //   url: "/secretariat",
+  // },
+  // {
+  //   cellName: "Fin",
+  //   title: "Finance Cell",
+  //   url: "/finance",
+  // },
+  // {
+  //   cellName: "Comms",
+  //   title: "Communications Cell",
+  //   url: "/communications",
+  // },
+  // {
+  //   cellName: "Life",
+  //   title: "Student Life Cell",
+  //   url: "/studentlife",
+  // },
+  // {
+  //   cellName: "Welfare",
+  //   title: "Student Welfare Cell",
+  //   url: "/studentwelfare",
+  // },
 ];
 
 const OurTeam = () => {
@@ -76,7 +76,7 @@ const OurTeam = () => {
       </div>
 
       {/* Cell selection */}
-      <div className={styles["cell-selection"]}>
+      {/* <div className={styles["cell-selection"]}>
         <div className={styles["cells"]}>
           {cells.map((cell) => (
             <button
@@ -90,7 +90,7 @@ const OurTeam = () => {
             </button>
           ))}
         </div>
-      </div>
+      </div> */}
 
       {/* Cell Content */}
       <div>
